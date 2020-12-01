@@ -23,20 +23,13 @@
 /*Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
 	
-	.container .card-group .card .card-img, .container .card-group .card .card-img-top {
-	    border-top-left-radius: calc(.25rem - 1px);
-	    border-top-right-radius: calc(.25rem - 1px);
-	    width: 200px!important;
-	    margin: 0 auto;
-	    display: block;
-	}
 
 	.container .card-group .card img.card-img-top {
 	    width: 25%!important;
 	   margin: 0 ; float:left;	
 	    display: block;
 	}
-	.container .card-group .card .card-bodyp {
+	.container .card-group .card .card-body{
 	    width: 75%!important;
 	   margin: 0 ; float:left;	
 	    display: block;
