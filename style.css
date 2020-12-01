@@ -26,13 +26,13 @@
 	.container .card-group .card .card-img, .container .card-group .card .card-img-top {
 	    border-top-left-radius: calc(.25rem - 1px);
 	    border-top-right-radius: calc(.25rem - 1px);
-	    max-width: 200px!important;
+	    width: 200px!important;
 	    margin: 0 auto;
 	    display: block;
 	}
 
 	.container .card-group .card img.card-img-top {
-	    max-width: 200px!important;
+	    width: 200px!important;
 	    margin: 0 auto;
 	    display: block;
 	}
