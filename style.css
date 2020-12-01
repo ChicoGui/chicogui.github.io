@@ -20,7 +20,7 @@
 		.card-title {text-align: left;}
 		.card-text{margin: 0 auto; font-size:0,75em;word-break: break-word;}
 
-// Extra small devices (portrait phones, less than 576px)
+/*Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
 	
 	.container .card-group .card .card-img, .container .card-group .card .card-img-top {
@@ -38,14 +38,14 @@
 	}
 }
 
-// Small devices (landscape phones, less than 768px)
+/*Small devices (landscape phones, less than 768px)*/
 @media (max-width: 767.98px) { ... }
 
-// Medium devices (tablets, less than 992px)
+/*Medium devices (tablets, less than 992px)*/
 @media (max-width: 991.98px) { ... }
 
-// Large devices (desktops, less than 1200px)
+/*Large devices (desktops, less than 1200px)*/
 @media (max-width: 1199.98px) { ... }
 
-// Extra large devices (large desktops)
-// No media query since the extra-large breakpoint has no upper bound on its width
+/*Extra large devices (large desktops)*/
+/*No media query since the extra-large breakpoint has no upper bound on its width*/
