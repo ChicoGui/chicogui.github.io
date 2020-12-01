@@ -23,11 +23,11 @@
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
 
-img.card-img-top {
-    max-width: 150px;
-    display: block;
-    margin: 0 auto;
-}
+	.card img.card-img-top {
+	    max-width: 200px;
+	    margin: 0 auto;
+	    display: block;
+	}
 }
 
 // Small devices (landscape phones, less than 768px)
