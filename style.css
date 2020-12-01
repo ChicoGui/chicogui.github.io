@@ -32,8 +32,13 @@
 	}
 
 	.container .card-group .card img.card-img-top {
-	    width: 200px!important;
-	    margin: 0 auto;
+	    width: 25%!important;
+	   margin: 0 ; float:left;	
+	    display: block;
+	}
+	.container .card-group .card .card-bodyp {
+	    width: 75%!important;
+	   margin: 0 ; float:left;	
 	    display: block;
 	}
 }
