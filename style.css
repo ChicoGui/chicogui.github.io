@@ -7,7 +7,7 @@
     		.bio{padding: 1em; max-width: 700px; margin: 0 auto; display: block; text-align: left;}
 		.bio h5{text-align: left}
     		#emContstrucao{padding:1em; display: block; margin: 0 auto; text-align:center;}
-		.card{border:none}
+		.card{border:none; margin-bottom: .25em;}
 		.card .card-body a{color: #9ea5b5;}
 		.card .card-body a:hover{color: #2f2f2f}
 		#emContstrucao a{padding: .25em; color: #9ea5b5; border: solid 1px; display: inline-flex;}
@@ -23,7 +23,9 @@
 /*Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
 	
-
+	.card-body {
+		    padding: .25em 1em;
+		}
 	.container .card-group .card img.card-img-top {
 	    width: 25%!important;
 	   margin: 0 ; float:left;	
@@ -33,6 +35,9 @@
 	    width: 75%!important;
 	   margin: 0 ; float:left;	
 	    display: block;
+	}
+	
+	.container .card-group .card .card-body p{
 	}
 }
 
