@@ -23,7 +23,7 @@
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
 	
-	.card-img, .card-img-top {
+	.container .card-group .card .card-img, .container .card-group .card .card-img-top {
 	    border-top-left-radius: calc(.25rem - 1px);
 	    border-top-right-radius: calc(.25rem - 1px);
 	    max-width: 200px;
@@ -31,7 +31,7 @@
 	    display: block;
 	}
 
-	.card img.card-img-top {
+	.container .card-group .card img.card-img-top {
 	    max-width: 200px;
 	    margin: 0 auto;
 	    display: block;
