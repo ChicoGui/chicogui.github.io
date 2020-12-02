@@ -27,7 +27,7 @@
 @media (max-width: 575.98px) {
 	
 	.card-body {
-		    padding: .25em 1em;
+		    padding: .2em .4em;
 		}
 	.container .card-group .card img.card-img-top {
 	    width: 25%!important;
