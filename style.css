@@ -44,6 +44,7 @@
 	    float: left;
 	    display: block;
 	    width: 100%;
+	    padding: .2em 1em;
 	}
 	
 	.container .card-group .card .card-body p{
