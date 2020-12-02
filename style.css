@@ -40,7 +40,7 @@
 	    display: block;
 	}
 	
-	.card-footer {
+	.container .card-group .card .card-footer {
 	    float: left;
 	    display: block;
 	    width: 100%;
