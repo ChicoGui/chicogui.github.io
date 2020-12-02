@@ -40,6 +40,12 @@
 	    display: block;
 	}
 	
+	.card-footer {
+	    float: left;
+	    display: block;
+	    width: 100%;
+	}
+	
 	.container .card-group .card .card-body p{
 	}
 }
