@@ -45,6 +45,7 @@
 	    display: block;
 	    width: 100%;
 	    padding: .2em 1em;
+	    text-align: center;
 	}
 	
 	.container .card-group .card .card-body p{
