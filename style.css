@@ -20,6 +20,10 @@
 		.card-title {text-align: left;}
 		.card-text{margin: 0 auto; font-size:0,75em;word-break: break-word;}
 
+.container-fluid img {
+    max-height: 350px;
+}
+
 /*Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
 	
