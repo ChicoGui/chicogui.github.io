@@ -13,7 +13,7 @@
 		#emContstrucao a{padding: .25em; color: #9ea5b5; border: solid 1px; display: inline-flex;}
 		#emContstrucao a:hover{background: #9ea5b5; color: #2f2f2f}
 		.card-group{margin-top:2em;}
-		.card{background: none; text-align:left; border: solid: 1px; display:block;}
+		.card{margin: 0 1em; background: none; text-align:center; border: solid: 1px; display:block;}
 		.card-body{padding: 1em;}
 		.card-title, .card-text{ font-family: 'Open Sans', sans-serif; display: block;}
 		.card-title{display:block; font-size: 1em: font-weight: bold;}
@@ -22,6 +22,12 @@
 		.container-fluid img {
 		    max-height: 350px;
 		}
+img.card-img-top {
+    max-height: 420px;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+}
 
 /*Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
