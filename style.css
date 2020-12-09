@@ -44,6 +44,7 @@
 	    width: 75%!important;
 	   margin: 0 ; float:left;	
 	    display: block;
+	text-align: center;
 	}
 	
 	.container .card-group .card .card-footer {
