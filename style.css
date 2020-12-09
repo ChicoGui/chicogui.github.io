@@ -22,12 +22,12 @@
 		.container-fluid img {
 		    max-height: 350px;
 		}
-img.card-img-top {
-    max-height: 420px;
-    width: auto;
-    margin: 0 auto;
-    display: block;
-}
+		.card img.card-img-top {
+		    max-height: 380px;
+		    width: auto;
+		    margin: 0 auto;
+		    display: block;
+		}
 
 /*Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
