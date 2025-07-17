@@ -118,6 +118,59 @@
       <h2 id="titulo-atuacao" class="display-6 mb-4 text-center">Áreas de atuação</h2>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
         <!-- Cards gerados dinamicamente via JS -->
+        <script>
+          const cards = [
+            {
+              icon: "kanban",
+              title: "Designer de Produtos",
+              text: "Crio produtos digitais completos, unindo estratégia, pesquisa, design e desenvolvimento com foco em resultados e experiência do usuário."
+            },
+            {
+              icon: "diagram-3",
+              title: "UX Designer",
+              text: "Pesquiso usuários, estruturo fluxos e protótipos, validando soluções com métodos qualitativos e quantitativos em ciclos iterativos."
+            },
+            {
+              icon: "palette2",
+              title: "UI Designer",
+              text: "Desenvolvo interfaces acessíveis, consistentes e intuitivas com foco em design system, tipografia e identidade visual coesa."
+            },
+            {
+              icon: "code-slash",
+              title: "Desenvolvimento Web",
+              text: "Crio sites responsivos e acessíveis usando HTML, CSS, JS e frameworks modernos com boas práticas e código limpo."
+            }
+          ];
+
+          document.write(cards.map((card, index) => `
+          <article class="col">
+            <div class="card h-100 p-4 text-center shadow card-hover border-0 bg-white">
+              <div class="icon-circle mx-auto text-dark mb-3">
+                <i class="bi bi-${card.icon} fs-2" aria-hidden="true"></i>
+              </div>
+              <h3 class="h5 fw-bold mb-3 text-dark">${card.title}</h3>
+              <p class="text-muted">${card.text}</p>
+              <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modal${index}">Saiba mais</button>
+            </div>
+          </article>
+
+          <div class="modal fade" id="modal${index}" tabindex="-1" aria-labelledby="modal${index}Label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modal${index}Label">${card.title}</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                  ${card.text}
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+              </div>
+            </div>
+          </div>`).join(''));
+        </script>
         
       </div>
     </section>
@@ -164,7 +217,42 @@
   </header>
 
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
-    <!-- Cards gerados dinamicamente via js -->
+    <script>
+      const metodologia = [
+        {
+          icon: "search",
+          title: "Imersão & Pesquisa",
+          text: "Começo cada projeto mergulhando no universo do usuário. Realizo entrevistas, analiso contextos e identifico oportunidades com empatia, garantindo decisões baseadas em dados e evidências reais do cotidiano."
+        },
+        {
+          icon: "vector-pen",
+          title: "Projeto",
+          text: "Transformo insights em interfaces claras, acessíveis e intuitivas. Estruturo fluxos, wireframes e protótipos que guiam as pessoas com naturalidade, promovendo experiências fluídas e com propósito real."
+        },
+        {
+          icon: "code",
+          title: "Produção",
+          text: "Codifico com foco em acessibilidade, performance e escalabilidade. Utilizo HTML, CSS e JS modernos, garantindo que os projetos funcionem bem em qualquer dispositivo e sejam inclusivos por padrão."
+        },
+        {
+          icon: "check2-square",
+          title: "Testes",
+          text: "Valido as soluções com testes de usabilidade, escuto os usuários e analiso interações reais. Ajusto cada detalhe com base em feedbacks para entregar experiências confiáveis e centradas nas pessoas."
+        }
+      ];
+
+      document.write(metodologia.map((item) => `
+        <article class="col">
+          <div class="card h-100 p-4 text-center shadow card-hover border-0 bg-white">
+            <div class="icon-circle mx-auto text-dark mb-3">
+              <i class="bi bi-${item.icon} fs-2" aria-hidden="true"></i>
+            </div>
+            <h3 class="h5 fw-bold mb-3 text-dark">${item.title}</h3>
+            <p class="text-muted">${item.text}</p>
+          </div>
+        </article>
+      `).join(''));
+    </script>
 
   </div>
 </section>
@@ -512,96 +600,9 @@
   <footer class="bg-light text-center py-4">
     <p class="mb-0">© 2025 UX & Web Dev — Criando experiências que conectam pessoas.</p>
   </footer>
-  <script>
-          const cards = [
-            {
-              icon: "kanban",
-              title: "Designer de Produtos",
-              text: "Crio produtos digitais completos, unindo estratégia, pesquisa, design e desenvolvimento com foco em resultados e experiência do usuário."
-            },
-            {
-              icon: "diagram-3",
-              title: "UX Designer",
-              text: "Pesquiso usuários, estruturo fluxos e protótipos, validando soluções com métodos qualitativos e quantitativos em ciclos iterativos."
-            },
-            {
-              icon: "palette2",
-              title: "UI Designer",
-              text: "Desenvolvo interfaces acessíveis, consistentes e intuitivas com foco em design system, tipografia e identidade visual coesa."
-            },
-            {
-              icon: "code-slash",
-              title: "Desenvolvimento Web",
-              text: "Crio sites responsivos e acessíveis usando HTML, CSS, JS e frameworks modernos com boas práticas e código limpo."
-            }
-          ];
 
-          document.write(cards.map((card, index) => `
-          <article class="col">
-            <div class="card h-100 p-4 text-center shadow card-hover border-0 bg-white">
-              <div class="icon-circle mx-auto text-dark mb-3">
-                <i class="bi bi-${card.icon} fs-2" aria-hidden="true"></i>
-              </div>
-              <h3 class="h5 fw-bold mb-3 text-dark">${card.title}</h3>
-              <p class="text-muted">${card.text}</p>
-              <button class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#modal${index}">Saiba mais</button>
-            </div>
-          </article>
-
-          <div class="modal fade" id="modal${index}" tabindex="-1" aria-labelledby="modal${index}Label" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="modal${index}Label">${card.title}</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-                </div>
-                <div class="modal-body">
-                  ${card.text}
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                </div>
-              </div>
-            </div>
-          </div>`).join(''));
-        </script>
     
-    <script>
-      const metodologia = [
-        {
-          icon: "search",
-          title: "Imersão & Pesquisa",
-          text: "Começo cada projeto mergulhando no universo do usuário. Realizo entrevistas, analiso contextos e identifico oportunidades com empatia, garantindo decisões baseadas em dados e evidências reais do cotidiano."
-        },
-        {
-          icon: "vector-pen",
-          title: "Projeto",
-          text: "Transformo insights em interfaces claras, acessíveis e intuitivas. Estruturo fluxos, wireframes e protótipos que guiam as pessoas com naturalidade, promovendo experiências fluídas e com propósito real."
-        },
-        {
-          icon: "code",
-          title: "Produção",
-          text: "Codifico com foco em acessibilidade, performance e escalabilidade. Utilizo HTML, CSS e JS modernos, garantindo que os projetos funcionem bem em qualquer dispositivo e sejam inclusivos por padrão."
-        },
-        {
-          icon: "check2-square",
-          title: "Testes",
-          text: "Valido as soluções com testes de usabilidade, escuto os usuários e analiso interações reais. Ajusto cada detalhe com base em feedbacks para entregar experiências confiáveis e centradas nas pessoas."
-        }
-      ];
-
-      document.write(metodologia.map((item) => `
-        <article class="col">
-          <div class="card h-100 p-4 text-center shadow card-hover border-0 bg-white">
-            <div class="icon-circle mx-auto text-dark mb-3">
-              <i class="bi bi-${item.icon} fs-2" aria-hidden="true"></i>
-            </div>
-            <h3 class="h5 fw-bold mb-3 text-dark">${item.title}</h3>
-            <p class="text-muted">${item.text}</p>
-          </div>
-        </article>
-      `).join(''));
-    </script>
+    
 <script>
 (() => {
   const form = document.getElementById('formContato');
