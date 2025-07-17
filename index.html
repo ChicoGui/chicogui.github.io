@@ -598,7 +598,6 @@
 </section>
 
 <script>
-// Validação Bootstrap + Reset + Mensagem de Sucesso
 (() => {
   const form = document.getElementById('formContato');
   const successMessage = document.getElementById('formSuccess');
@@ -607,19 +606,10 @@
     if (!form.checkValidity()) {
       event.preventDefault();
       event.stopPropagation();
-    } else {
-      event.preventDefault();
-
-      // Simula envio e sucesso (troque por comportamento real se quiser)
-      form.classList.add('d-none');
-      successMessage.classList.remove('d-none');
-      
-      // Reset e remover validação
-      form.reset();
-      form.classList.remove('was-validated');
-    }
-
-    form.classList.add('was-validated');
+      form.classList.add('was-validated');
+    } 
+    // Se for válido, deixar o formulário seguir normalmente
+    // O Formspree cuidará do envio
   });
 })();
 </script>
