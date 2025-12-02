@@ -1,99 +1,226 @@
-   :root {
-      --main-color: #222;
-      --text-color: #333;
-      --bg-card: #f9f9f9;
-      --border-color: #e0e0e0;
-    }
-    body, main{padding:0; margin:}
+/* =========================================================
+   VARIABLES & ROOT CONFIG
+========================================================= */
+:root {
+  --main-color: #222;
+  --text-color: #333;
+  --bg-card: #f9f9f9;
+  --border-color: #e0e0e0;
 
-    #inicio, #atuacao, #sobreMim, #contato{
-      padding-top:80px;
-    }
-    #contato{ height: 100% !important; padding-bottom:80px;}
-    #bio, #curriculo{
-      max-width:750px;
-      margin: 0 auto;
-    }
+  /* Dark mode */
+  --dark-bg: #121212;
+  --dark-surface: #1e1e1e;
+  --dark-text: #e0e0e0;
+  --dark-border: #333;
 
-    #formContato{
-      max-width:500px; 
-      display:block;
-      margin: 0 auto;
-      background: #ffffff3b;
-      padding: 20px;
-      box-shadow: 0px 0px 2px 4px rgb(77 77 77 / 20%);
-    }
-    .form-label {
-      font-weight: bold;
-      color: #000000;
-    }
-    .invalid-feedback {
-      font-weight: bold;
-    }
-    .carousel-item img {
-      max-height: 500px;
-      object-fit: cover;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-    }
+  /* Spacing */
+  --section-padding-desktop: 80px;
+  --section-padding-mobile: 40px;
+}
 
-    .slider-img {
-      height: 300px;
-      object-fit: cover;
-    }
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
+html {
+  scroll-behavior: smooth;
+}
 
-    .card-hover {
-      transition: transform 0.3s, box-shadow 0.3s;
-      border: solid 1px #ccc!important;
-    }
+body,
+main {
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+  color: var(--text-color);
+  font-family: system-ui, sans-serif;
+}
 
-    .card-hover:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.1);
-    }
+/* =========================================================
+   SECTION SPACING
+========================================================= */
+#inicio,
+#atuacao,
+#sobreMim,
+#contato {
+  padding-top: var(--section-padding-desktop);
+}
 
-    .icon-circle {
-      width: 64px;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      background-color: var(--border-color);
-    }
+#contato {
+  height: 100% !important;
+  padding-bottom: 80px;
+}
 
-    button.accordion-button.collapsed {
-      border-bottom: solid 1px #ccc!important;
-    }
+/* Mobile spacing */
+@media (max-width: 575px) {
+  #inicio,
+  #atuacao,
+  #sobreMim,
+  #contato {
+    padding-top: var(--section-padding-mobile);
+  }
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+/* =========================================================
+   LAYOUT CONTAINERS
+========================================================= */
+#bio,
+#curriculo {
+  max-width: 750px;
+  margin: 0 auto;
+}
 
-    .theme-toggle {
-      cursor: pointer;
-    }
+/* =========================================================
+   FORMS
+========================================================= */
+#formContato {
+  max-width: 500px;
+  margin: 0 auto;
+  display: block;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.15);
+}
 
-    body.dark-mode {
-      background-color: #121212;
-      color: #e0e0e0;
-    }
+.form-label {
+  font-weight: bold;
+  color: #000;
+}
 
-    body.dark-mode .bg-light {
-      background-color: #1e1e1e !important;
-    }
+.invalid-feedback {
+  font-weight: bold;
+}
 
-    body.dark-mode .text-dark {
-      color: #f0f0f0 !important;
-    }
+/* Dark mode form fixes */
+body.dark-mode .form-control {
+  background-color: #2a2a2a;
+  color: var(--dark-text);
+  border-color: var(--dark-border);
+}
 
-    body.dark-mode .btn-outline-dark {
-      border-color: #bbb;
-      color: #bbb;
-    }
+body.dark-mode #formContato {
+  background: rgba(255, 255, 255, 0.05);
+}
 
-    body.dark-mode .btn-outline-dark:hover {
-      background-color: #bbb;
-      color: #121212;
-    }
+/* =========================================================
+   IMAGES & MEDIA
+========================================================= */
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.slider-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* =========================================================
+   CARDS & ELEMENTS
+========================================================= */
+.card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: solid 1px #ccc !important;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12);
+}
+
+/* Disable hover effects on mobile */
+@media (max-width: 575px) {
+  .card-hover:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .card-hover {
+    margin-bottom: 20px;
+  }
+}
+
+/* =========================================================
+   ICONS
+========================================================= */
+.icon-circle {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--border-color);
+}
+
+/* =========================================================
+   ACCORDION
+========================================================= */
+button.accordion-button.collapsed {
+  border-bottom: solid 1px #ccc !important;
+}
+
+body.dark-mode .accordion-item {
+  background-color: var(--dark-surface);
+  border-color: var(--dark-border);
+}
+
+body.dark-mode .accordion-button {
+  background-color: var(--dark-surface);
+  color: var(--dark-text);
+}
+
+/* =========================================================
+   DARK MODE
+========================================================= */
+.theme-toggle {
+  cursor: pointer;
+}
+
+body.dark-mode {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+body.dark-mode .bg-light {
+  background-color: var(--dark-surface) !important;
+}
+
+body.dark-mode .text-dark {
+  color: var(--dark-text) !important;
+}
+
+body.dark-mode .btn-outline-dark {
+  border-color: #bbb;
+  color: #bbb;
+}
+
+body.dark-mode .btn-outline-dark:hover {
+  background-color: #bbb;
+  color: var(--dark-bg);
+}
+
+body.dark-mode .card {
+  background-color: var(--dark-surface);
+  border-color: var(--dark-border);
+}
+
+/* =========================================================
+   TYPOGRAPHY RESPONSIVE
+========================================================= */
+@media (max-width: 575px) {
+  h1 {
+    font-size: 1.65rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
