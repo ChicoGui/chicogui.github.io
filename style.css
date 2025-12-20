@@ -6,7 +6,7 @@
     }
     body, main{padding:0; margin:}
 
-    #inicio, #atuacao, #sobreMim, #contato{
+    #inicio, #atuacao, #servicos, #sobreMim, #contato{
       padding-top:80px;
     }
     #contato{ height: 100% !important; padding-bottom:80px;}
@@ -14,6 +14,26 @@
       max-width:750px;
       margin: 0 auto;
     }
+
+    .hero-text {
+       max-width:700px;
+       margin: 0 auto 1em;
+    }
+    .hero-text h1 {
+      font-size: 30px;
+    }
+
+    .hero-text p{
+      font-size: 1rem;
+      margin-bottom: 0px;
+    }
+
+    .ctas{
+      width: fit-content;
+      display: block;
+      margin: 1rem auto;
+    }
+
 
     #formContato{
       max-width:500px; 
@@ -43,6 +63,15 @@
       object-fit: cover;
     }
 
+    .card h3{
+      font-size: 1rem;;
+    }  
+    .card p{
+      overflow-wrap: break-word;
+      hyphens: auto;
+      font-size:0.9rem
+    }
+
     .card-hover {
       transition: transform 0.3s, box-shadow 0.3s;
       border: solid 1px #ccc!important;
@@ -53,6 +82,19 @@
       box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.1);
     }
 
+    .card-header-inline {
+      display: flex;
+      align-items: center;     /* central vertical */
+    }
+
+
+    .card-header-inline .icon-circle {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+    }
+
+
     .icon-circle {
       width: 64px;
       height: 64px;
@@ -60,7 +102,7 @@
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      background-color: var(--border-color);
+    
     }
 
     button.accordion-button.collapsed {
