@@ -527,7 +527,7 @@
 <footer class="bg-dark text-white py-4">
   <div class="container text-center">
     <p class="mb-1 fw-bold">ChicoGui</p>
-    <small>&copy; 2025 — Todos os direitos reservados</small>
+    <small>&copy;<span id="ano"></span> — Todos os direitos reservados</small>
   </div>
 </footer>
 
@@ -537,12 +537,16 @@
 
 <script>
 
+document.getElementById("ano").textContent = new Date().getFullYear();
 /* ====== Navegação ===== */
 
 document.addEventListener("DOMContentLoaded", function () {
   const navbarCollapse = document.getElementById('mainNav');
   const navLinks = document.querySelectorAll('.nav-link');
   const toggler = document.querySelector('.navbar-toggler');
+
+  
+
 
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -718,8 +722,8 @@ document.getElementById("cardsServicos").innerHTML = servicos.map(item => `
       
         <p class="text-muted">${item.text}</p>
       </div>
-      <div class="card-footer mx-auto">
-        <button class="btn btn-outline-primary"
+      <div class="card-footer">
+        <button class="btn btn-outline-primary" style="width:100%"
           data-bs-toggle="modal"
           data-bs-target="#${item.id}">
           Saiba mais
