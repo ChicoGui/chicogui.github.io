@@ -256,6 +256,26 @@ body { font-family: system-ui; }
 </footer>
 
 <script>
+
+  document.addEventListener("DOMContentLoaded", function () {
+  const navbarCollapse = document.getElementById('mainNav');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const toggler = document.querySelector('.navbar-toggler');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const isMobile = window.getComputedStyle(toggler).display !== 'none';
+
+      if (isMobile && navbarCollapse.classList.contains('show')) {
+        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) 
+          || new bootstrap.Collapse(navbarCollapse, { toggle: false });
+
+        bsCollapse.hide();
+      }
+    });
+  });
+});
+  
 document.getElementById("ano").textContent = new Date().getFullYear();
 
 document.getElementById("formContato").addEventListener("submit", e => {
