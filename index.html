@@ -50,11 +50,61 @@ body { font-family: system-ui; }
 <body>
 
 <header>
-<nav class="navbar navbar-expand-md bg-white shadow-sm fixed-top">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">ChicoGui</a>
-  </div>
-</nav>
+  <nav class="navbar navbar-expand-md fixed-top bg-light border-bottom" aria-label="Navegação principal">
+    <div class="container-fluid">
+
+      <!-- Logo -->
+      <a class="navbar-brand fw-bold" href="#hero">
+        ChicoGui
+      </a>
+
+      <!-- Toggle Mobile -->
+      <button 
+        class="navbar-toggler d-flex align-items-center gap-2" 
+        type="button" 
+        data-bs-toggle="collapse" 
+        data-bs-target="#mainNav" 
+        aria-controls="mainNav" 
+        aria-expanded="false" 
+        aria-label="Abrir menu de navegação">
+
+        <span class="fw-semibold small">Menu</span>
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu -->
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-md-0 text-md-end">
+
+          <li class="nav-item">
+            <a class="nav-link" href="#hero">Início</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#areas">Atuação</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#servicos">Serviços</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#metodologia">Metodologia</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#sobre">Sobre</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contato">Contato</a>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </nav>
 </header>
 
 <main>
