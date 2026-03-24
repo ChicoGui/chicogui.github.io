@@ -18,6 +18,179 @@
 
   <!-- Styles -->
   <!--link href="style.css" rel="stylesheet"-->
+  <style>
+    /* ================= RESET ================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ================= TIPOGRAFIA ================= */
+h1 {
+  font-size: clamp(1.8rem, 6vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.4rem, 4vw, 2rem);
+}
+
+p {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  max-width: 700px;
+}
+
+/* ================= SECTIONS ================= */
+section {
+  padding: 60px 0;
+}
+
+/* ================= HERO ================= */
+#hero {
+  background: linear-gradient(135deg, #111, #333);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+#hero .container {
+  max-width: 700px;
+}
+
+/* BOTÕES */
+#hero .btn {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  #hero .btn {
+    width: auto;
+  }
+}
+
+/* ================= HERO IMAGES ================= */
+.hero-image {
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  .hero-image {
+    height: 60vh;
+  }
+}
+
+/* ================= GRID ================= */
+.row {
+  margin: 0;
+}
+
+/* ================= CARDS ================= */
+.card {
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+}
+
+/* HEADER CARD */
+.card-header-inline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ÍCONES */
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================= METODOLOGIA ================= */
+#metodologia .card {
+  padding: 20px;
+}
+
+/* ================= SOBRE ================= */
+#bio {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ================= BADGES ================= */
+.badge {
+  font-size: 0.8rem;
+}
+
+/* ================= FORM ================= */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+/* ================= CONTATO ================= */
+#contato {
+  padding: 80px 0;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  padding: 10px 0;
+}
+
+/* ================= ESPAÇAMENTO ================= */
+.mb-5 {
+  margin-bottom: 2rem !important;
+}
+
+/* ================= RESPONSIVIDADE ================= */
+
+/* Tablet */
+@media (min-width: 768px) {
+  section {
+    padding: 80px 0;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  section {
+    padding: 100px 0;
+  }
+}
+  </style>
 </head>
 
 <body>
