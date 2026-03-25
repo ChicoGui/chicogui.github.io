@@ -961,7 +961,7 @@ document.getElementById("modaisServicos").innerHTML = servicos.map(item => `
         <div class="modal-body">
           
 
-          ${item.modal.description
+          ${item.modal.conteudo
             .trim()
             .split('\n\n')
             .map(paragraph => `<p>${paragraph.trim()}</p>`)
