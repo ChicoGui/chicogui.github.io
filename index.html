@@ -989,6 +989,12 @@ modais.forEach((modalEl, index) => {
   prevBtn.disabled = index === 0;
 nextBtn.disabled = index === servicos.length - 1;
 
+  bootstrap.Modal.getInstance(modalEl).hide();
+
+setTimeout(() => {
+  new bootstrap.Modal(nextModal).show();
+}, 200);
+
 
 /* ===== form ===== */
 
