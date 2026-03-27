@@ -152,6 +152,13 @@ p {
 .modal-body {
   line-height: 1.7;
 }
+.modal-navigation {
+  gap: 10px;
+}
+
+.modal-navigation .btn {
+  flex: 1;
+}
     
 /* ================= FORM ================= */
 form {
@@ -192,6 +199,14 @@ textarea {
 
   .hero-image {
     height: 60vh;
+  }
+  .modal-navigation {
+    justify-content: space-between;
+  }
+
+  .modal-navigation .btn {
+    flex: unset;
+    min-width: 140px;
   }
 }
 
@@ -926,9 +941,12 @@ document.getElementById("modaisServicos").innerHTML = servicos.map(item => `
 
         <div class="modal-body">
           
-
           ${item.modal.conteudo}
-
+          
+          <div class="modal-navigation d-flex justify-content-between mt-4">
+            <button class="btn btn-outline-secondary prev-btn">← Anterior</button>
+            <button class="btn btn-primary next-btn">Próximo →</button>
+          </div>
         </div>
 
         <div class="modal-footer">
@@ -940,7 +958,36 @@ document.getElementById("modaisServicos").innerHTML = servicos.map(item => `
   </div>
 `).join("");
 
+const modais = document.querySelectorAll('.modal');
 
+modais.forEach((modalEl, index) => {
+
+  const prevBtn = modalEl.querySelector('.prev-btn');
+  const nextBtn = modalEl.querySelector('.next-btn');
+
+  // PREV
+  prevBtn.addEventListener('click', () => {
+    const prevIndex = (index - 1 + servicos.length) % servicos.length;
+
+    bootstrap.Modal.getInstance(modalEl).hide();
+
+    const prevModal = document.getElementById(servicos[prevIndex].id);
+    new bootstrap.Modal(prevModal).show();
+  });
+
+  // NEXT
+  nextBtn.addEventListener('click', () => {
+    const nextIndex = (index + 1) % servicos.length;
+
+    bootstrap.Modal.getInstance(modalEl).hide();
+
+    const nextModal = document.getElementById(servicos[nextIndex].id);
+    new bootstrap.Modal(nextModal).show();
+  });
+
+});
+  prevBtn.disabled = index === 0;
+nextBtn.disabled = index === servicos.length - 1;
 
 
 /* ===== form ===== */
