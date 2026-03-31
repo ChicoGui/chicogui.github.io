@@ -19,58 +19,68 @@
   <!-- Styles -->
   <!--link href="style.css" rel="stylesheet"-->
   <style>
-/* ================= RESET ================= */
+    /* ================= RESET ================= */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, sans-serif;
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* ================= LAYOUT ================= */
 .container {
   width: 100%;
   max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 16px;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 4vw, 24px);
 }
 
 section {
-  padding: 60px 0;
+  padding-block: clamp(60px, 10vw, 100px);
 }
 
 /* ================= TIPOGRAFIA ================= */
 h1 {
   font-size: clamp(1.8rem, 6vw, 3rem);
+  line-height: 1.2;
 }
 
 h2 {
   font-size: clamp(1.4rem, 4vw, 2rem);
+  line-height: 1.3;
 }
 
 p {
   font-size: clamp(1rem, 2.5vw, 1.1rem);
-  max-width: 700px;
+  max-width: 65ch;
 }
 
 /* ================= NAVBAR ================= */
 .navbar {
-  padding: 10px 0;
+  padding-block: 10px;
 }
 
 /* ================= HERO ================= */
 #hero {
+  position: relative;
   background: linear-gradient(135deg, #111, #333);
   background-image: url('chicoOffice.png');
   background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
-  min-height: 60vh;
+  min-height: clamp(60vh, 70vh, 90vh);
 }
 
 #hero .container {
@@ -79,13 +89,13 @@ p {
 
 #hero .btn {
   width: 100%;
-  margin-bottom: 10px;
+  min-height: 44px;
 }
 
 /* ================= HERO IMAGE ================= */
 .hero-image {
   width: 100%;
-  height: 40vh;
+  height: clamp(40vh, 50vh, 60vh);
   background-size: cover;
   background-position: center;
 }
@@ -101,7 +111,7 @@ p {
   display: flex;
   flex-direction: column;
   border-radius: 16px;
-  transition: 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .card-body {
@@ -109,7 +119,7 @@ p {
 }
 
 .card-hover:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 }
 
 /* Header do card */
@@ -128,6 +138,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 /* ================= SEÇÕES ESPECÍFICAS ================= */
@@ -136,16 +147,16 @@ p {
 }
 
 #bio {
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: 65ch;
+  margin-inline: auto;
 }
 
-#formacao{
+#formacao {
   margin-bottom: 10px;
 }
 
 #contato {
-  padding: 80px 0;
+  padding-block: clamp(80px, 10vw, 120px);
 }
 
 /* ================= MODAIS ================= */
@@ -156,14 +167,18 @@ p {
 .modal-body {
   line-height: 1.7;
 }
+
 .modal-navigation {
+  display: flex;
+  flex-direction: column;
   gap: 10px;
 }
 
 .modal-navigation .btn {
-  flex: 1;
+  width: 100%;
+  min-height: 44px;
 }
-    
+
 /* ================= FORM ================= */
 form {
   display: flex;
@@ -176,11 +191,12 @@ textarea {
   width: 100%;
   padding: 12px;
   font-size: 1rem;
+  border-radius: 8px;
 }
 
 /* ================= BADGES ================= */
 .badge {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
 /* ================= UTILIDADES ================= */
@@ -193,23 +209,17 @@ textarea {
 /* ===== Tablet (≥768px) ===== */
 @media (min-width: 768px) {
 
-  section {
-    padding: 80px 0;
-  }
-
   #hero .btn {
     width: auto;
   }
 
-  .hero-image {
-    height: 60vh;
-  }
   .modal-navigation {
+    flex-direction: row;
     justify-content: space-between;
   }
 
   .modal-navigation .btn {
-    flex: unset;
+    width: auto;
     min-width: 140px;
   }
 }
@@ -217,8 +227,8 @@ textarea {
 /* ===== Desktop (≥1024px) ===== */
 @media (min-width: 1024px) {
 
-  section {
-    padding: 100px 0;
+  #hero {
+    min-height: 80vh;
   }
 }
   </style>
