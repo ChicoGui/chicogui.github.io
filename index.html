@@ -385,12 +385,113 @@ textarea {
 
   </article>
 
-  <div class="row" id="curriculo">
-    <section class="col-md-8 mb-4" >
-      <article id="formacao">
-        <header>
-          <h2 class="h4">Formação Acadêmica</h2>
-        </header>
+      <section id="tabs" class="container">
+    <h2 class="text-center mb-4">Sobre mim</h2>
+
+    <!-- NAV TABS -->
+    <ul class="nav nav-tabs justify-content-center" id="profileTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#habilidades" type="button">Habilidades</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#formacao" type="button">Formação</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#experiencia" type="button">Experiência</button>
+      </li>
+    </ul>
+
+    <!-- CONTENT -->
+    <div class="tab-content mt-4">
+
+      <!-- HABILIDADES -->
+      <div class="tab-pane fade show active" id="habilidades">
+              <!-- Design e Prototipação -->
+        <article class="mb-3">
+          <h3 class="h6">Design e Prototipação</h3>
+          <ul class="list-unstyled d-flex flex-wrap gap-2">
+            <li class="badge rounded-pill bg-info text-dark">Figma</li>
+            <li class="badge rounded-pill bg-info text-dark">Adobe XD</li>
+            <li class="badge rounded-pill bg-info text-dark">Wireframing</li>
+            <li class="badge rounded-pill bg-info text-dark">Prototipagem Interativa</li>
+            <li class="badge rounded-pill bg-info text-dark">Design Responsivo</li>
+            <li class="badge rounded-pill bg-info text-dark">Testes de Usabilidade</li>
+            <li class="badge rounded-pill bg-info text-dark">Design System</li>
+            <li class="badge rounded-pill bg-info text-dark">Acessibilidade (WCAG 2.1)</li>
+          </ul>
+        </article>
+
+        <!-- Desenvolvimento Web -->
+        <article class="mb-3">
+          <h3 class="h6">Desenvolvimento Web</h3>
+          <ul class="list-unstyled d-flex flex-wrap gap-2">
+            <!-- Front-end -->
+            <li class="badge rounded-pill bg-info text-dark">HTML5 Semântico</li>
+            <li class="badge rounded-pill bg-info text-dark">CSS3 + Flexbox/Grid</li>
+            <li class="badge rounded-pill bg-info text-dark">SASS/SCSS</li>
+            <li class="badge rounded-pill bg-info text-dark">JavaScript ES6+</li>
+            <li class="badge rounded-pill bg-info text-dark">TypeScript</li>
+            <li class="badge rounded-pill bg-info text-dark">React.js</li>
+            <li class="badge rounded-pill bg-info text-dark">Vue.js</li>
+            <li class="badge rounded-pill bg-info text-dark">Angular</li>
+
+            <!-- Back-end -->
+            <li class="badge rounded-pill bg-info text-dark">Node.js</li>
+            <li class="badge rounded-pill bg-info text-dark">PHP</li>
+            <li class="badge rounded-pill bg-info text-dark">SQL / MySQL</li>
+            <li class="badge rounded-pill bg-info text-dark">NoSQL / MongoDB</li>
+            <li class="badge rounded-pill bg-info text-dark">APIs REST</li>
+            <li class="badge rounded-pill bg-info text-dark">Autenticação JWT/OAuth</li>
+          </ul>
+        </article>
+
+        <!-- CMS e Ferramentas -->
+        <article class="mb-3">
+          <h3 class="h6">CMS e Ferramentas</h3>
+          <ul class="list-unstyled d-flex flex-wrap gap-2">
+            <li class="badge rounded-pill bg-info text-dark">WordPress</li>
+            <li class="badge rounded-pill bg-info text-dark">Drupal</li>
+            <li class="badge rounded-pill bg-info text-dark">Joomla</li>
+            <li class="badge rounded-pill bg-info text-dark">WooCommerce</li>
+            <li class="badge rounded-pill bg-info text-dark">Moodle</li>
+            <li class="badge rounded-pill bg-info text-dark">Git / GitHub / GitLab</li>
+            <li class="badge rounded-pill bg-info text-dark">npm / Webpack / Vite</li>
+            <li class="badge rounded-pill bg-info text-dark">CI/CD básico</li>
+          </ul>
+        </article>
+
+        <!-- Otimização e Métricas -->
+        <article class="mb-3">
+          <h3 class="h6">Otimização e Métricas</h3>
+          <ul class="list-unstyled d-flex flex-wrap gap-2">
+            <li class="badge rounded-pill bg-info text-dark">SEO Técnico</li>
+            <li class="badge rounded-pill bg-info text-dark">Google Analytics</li>
+            <li class="badge rounded-pill bg-info text-dark">Google Tag Manager</li>
+            <li class="badge rounded-pill bg-info text-dark">Performance Web (Lighthouse)</li>
+            <li class="badge rounded-pill bg-info text-dark">Boas práticas de segurança</li>
+            <li class="badge rounded-pill bg-info text-dark">Cross-browser Compatibility</li>
+          </ul>
+        </article>
+
+        <!-- Soft Skills -->
+        <!--article class="mb-3">
+          <h3 class="h6">Soft Skills</h3>
+          <ul class="list-unstyled d-flex flex-wrap gap-2">
+            <li class="badge rounded-pill bg-info text-dark">Comunicação clara</li>
+            <li class="badge rounded-pill bg-info text-dark">Trabalho em equipe</li>
+            <li class="badge rounded-pill bg-info text-dark">Gestão de tempo</li>
+            <li class="badge rounded-pill bg-info text-dark">Resolução de problemas</li>
+            <li class="badge rounded-pill bg-info text-dark">Pensamento analítico</li>
+            <li class="badge rounded-pill bg-info text-dark">Criatividade</li>
+            <li class="badge rounded-pill bg-info text-dark">Aprendizado contínuo</li>
+            <li class="badge rounded-pill bg-info text-dark">Autonomia</li>
+            <li class="badge rounded-pill bg-info text-dark">Empatia com usuários</li>
+          </ul>
+        </article-->
+      </div>
+
+      <!-- FORMAÇÃO -->
+      <div class="tab-pane fade" id="formacao">
         <ul class="list-group list-group-flush border rounded shadow-sm">
           <li class="list-group-item">
             <strong>Pós Graduando em Gestão de Projetos e Desenvolvimento Web</strong><br>
@@ -408,10 +509,10 @@ textarea {
             2009 – 2017
           </li>
         </ul>
-      </article>
+      </div>
 
-      <article>
-        <header><h2 class="h4">Experiência Profissional</h2></header>
+      <!-- EXPERIÊNCIA -->
+      <div class="tab-pane fade" id="experiencia">
         <div class="accordion accordion-flush" id="accordionFlushExperience">
           <!-- Cada item de experiência será mantido como já estava, ex: -->
           <div class="accordion-item">
@@ -588,97 +689,38 @@ textarea {
               </div>
             </div>
           </div>
-              </article>
+        
+      </div>
 
+    </div>
+  </section>
 
-            </section>
+  <div class="row" id="curriculo">
+    <section class="col-md-8 mb-4" >
+      <article id="formacao">
+        <header>
+          <h2 class="h4">Formação Acadêmica</h2>
+        </header>
+        <ul class="list-group list-group-flush border rounded shadow-sm">
+          <li class="list-group-item">
+            <strong>Pós Graduando em Gestão de Projetos e Desenvolvimento Web</strong><br>
+            Universidade Anhanguera<br>
+            conclusão em julho de 2026
+          </li>
+          <li class="list-group-item">
+            <strong>Pós Graduando em Design de Produtos Digitais - UX/UI</strong><br>
+            Universidade Anhanguera<br>
+            conclusão em julho de 2026
+          </li>
+          <li class="list-group-item">
+            <strong>Bacharelado em Desenho Industrial</strong><br>
+            Universidade Federal do Espírito Santo (UFES)<br>
+            2009 – 2017
+          </li>
+        </ul>
+      </article>
 
-            <section class="col-md-4 mb-4">
-              <header><h2 class="h4">Habilidades e Ferramentas</h2></header>
-
-              <!-- Design e Prototipação -->
-        <article class="mb-3">
-          <h3 class="h6">Design e Prototipação</h3>
-          <ul class="list-unstyled d-flex flex-wrap gap-2">
-            <li class="badge rounded-pill bg-info text-dark">Figma</li>
-            <li class="badge rounded-pill bg-info text-dark">Adobe XD</li>
-            <li class="badge rounded-pill bg-info text-dark">Wireframing</li>
-            <li class="badge rounded-pill bg-info text-dark">Prototipagem Interativa</li>
-            <li class="badge rounded-pill bg-info text-dark">Design Responsivo</li>
-            <li class="badge rounded-pill bg-info text-dark">Testes de Usabilidade</li>
-            <li class="badge rounded-pill bg-info text-dark">Design System</li>
-            <li class="badge rounded-pill bg-info text-dark">Acessibilidade (WCAG 2.1)</li>
-          </ul>
-        </article>
-
-        <!-- Desenvolvimento Web -->
-        <article class="mb-3">
-          <h3 class="h6">Desenvolvimento Web</h3>
-          <ul class="list-unstyled d-flex flex-wrap gap-2">
-            <!-- Front-end -->
-            <li class="badge rounded-pill bg-info text-dark">HTML5 Semântico</li>
-            <li class="badge rounded-pill bg-info text-dark">CSS3 + Flexbox/Grid</li>
-            <li class="badge rounded-pill bg-info text-dark">SASS/SCSS</li>
-            <li class="badge rounded-pill bg-info text-dark">JavaScript ES6+</li>
-            <li class="badge rounded-pill bg-info text-dark">TypeScript</li>
-            <li class="badge rounded-pill bg-info text-dark">React.js</li>
-            <li class="badge rounded-pill bg-info text-dark">Vue.js</li>
-            <li class="badge rounded-pill bg-info text-dark">Angular</li>
-
-            <!-- Back-end -->
-            <li class="badge rounded-pill bg-info text-dark">Node.js</li>
-            <li class="badge rounded-pill bg-info text-dark">PHP</li>
-            <li class="badge rounded-pill bg-info text-dark">SQL / MySQL</li>
-            <li class="badge rounded-pill bg-info text-dark">NoSQL / MongoDB</li>
-            <li class="badge rounded-pill bg-info text-dark">APIs REST</li>
-            <li class="badge rounded-pill bg-info text-dark">Autenticação JWT/OAuth</li>
-          </ul>
-        </article>
-
-        <!-- CMS e Ferramentas -->
-        <article class="mb-3">
-          <h3 class="h6">CMS e Ferramentas</h3>
-          <ul class="list-unstyled d-flex flex-wrap gap-2">
-            <li class="badge rounded-pill bg-info text-dark">WordPress</li>
-            <li class="badge rounded-pill bg-info text-dark">Drupal</li>
-            <li class="badge rounded-pill bg-info text-dark">Joomla</li>
-            <li class="badge rounded-pill bg-info text-dark">WooCommerce</li>
-            <li class="badge rounded-pill bg-info text-dark">Moodle</li>
-            <li class="badge rounded-pill bg-info text-dark">Git / GitHub / GitLab</li>
-            <li class="badge rounded-pill bg-info text-dark">npm / Webpack / Vite</li>
-            <li class="badge rounded-pill bg-info text-dark">CI/CD básico</li>
-          </ul>
-        </article>
-
-        <!-- Otimização e Métricas -->
-        <article class="mb-3">
-          <h3 class="h6">Otimização e Métricas</h3>
-          <ul class="list-unstyled d-flex flex-wrap gap-2">
-            <li class="badge rounded-pill bg-info text-dark">SEO Técnico</li>
-            <li class="badge rounded-pill bg-info text-dark">Google Analytics</li>
-            <li class="badge rounded-pill bg-info text-dark">Google Tag Manager</li>
-            <li class="badge rounded-pill bg-info text-dark">Performance Web (Lighthouse)</li>
-            <li class="badge rounded-pill bg-info text-dark">Boas práticas de segurança</li>
-            <li class="badge rounded-pill bg-info text-dark">Cross-browser Compatibility</li>
-          </ul>
-        </article>
-
-        <!-- Soft Skills -->
-        <!--article class="mb-3">
-          <h3 class="h6">Soft Skills</h3>
-          <ul class="list-unstyled d-flex flex-wrap gap-2">
-            <li class="badge rounded-pill bg-info text-dark">Comunicação clara</li>
-            <li class="badge rounded-pill bg-info text-dark">Trabalho em equipe</li>
-            <li class="badge rounded-pill bg-info text-dark">Gestão de tempo</li>
-            <li class="badge rounded-pill bg-info text-dark">Resolução de problemas</li>
-            <li class="badge rounded-pill bg-info text-dark">Pensamento analítico</li>
-            <li class="badge rounded-pill bg-info text-dark">Criatividade</li>
-            <li class="badge rounded-pill bg-info text-dark">Aprendizado contínuo</li>
-            <li class="badge rounded-pill bg-info text-dark">Autonomia</li>
-            <li class="badge rounded-pill bg-info text-dark">Empatia com usuários</li>
-          </ul>
-        </article-->
-    </section>
+    
   </div>
   </div>
 </section>
