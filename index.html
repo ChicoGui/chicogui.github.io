@@ -848,35 +848,22 @@ modais.forEach((modalEl, index) => {
   const prevBtn = modalEl.querySelector('.prev-btn');
   const nextBtn = modalEl.querySelector('.next-btn');
 
-  // PREV
+  prevBtn.disabled = index === 0;
+  nextBtn.disabled = index === servicos.length - 1;
+
   prevBtn.addEventListener('click', () => {
     const prevIndex = (index - 1 + servicos.length) % servicos.length;
-
     bootstrap.Modal.getInstance(modalEl).hide();
-
-    const prevModal = document.getElementById(servicos[prevIndex].id);
-    new bootstrap.Modal(prevModal).show();
+    new bootstrap.Modal(document.getElementById(servicos[prevIndex].id)).show();
   });
 
-  // NEXT
   nextBtn.addEventListener('click', () => {
     const nextIndex = (index + 1) % servicos.length;
-
     bootstrap.Modal.getInstance(modalEl).hide();
-
-    const nextModal = document.getElementById(servicos[nextIndex].id);
-    new bootstrap.Modal(nextModal).show();
+    new bootstrap.Modal(document.getElementById(servicos[nextIndex].id)).show();
   });
 
 });
-  prevBtn.disabled = index === 0;
-nextBtn.disabled = index === servicos.length - 1;
-
-  bootstrap.Modal.getInstance(modalEl).hide();
-
-setTimeout(() => {
-  new bootstrap.Modal(nextModal).show();
-}, 200);
 
 
 /* ===== form ===== */
