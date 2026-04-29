@@ -548,33 +548,36 @@ textarea {
   </div>
 </section>
 
-  <section id="contato" class="text-white" style="background:url('chicoContato.png') center/cover;">
-  <div class="container reveal">
+<section id="contato" class="text-white" style="background:url('chicoContato.png') center/cover;">
+  <div class="container">
     <h2 class="text-center mb-4">Fale comigo</h2>
 
-    <div id="formSuccess" class="alert alert-success d-none" role="alert">
-      Mensagem enviada com sucesso! Entrarei em contato em breve.
+    <div id="formSuccess" class="alert alert-success d-none text-center">
+      Mensagem enviada com sucesso! 🚀
     </div>
 
-    <form id="formContato" class="col-md-6 mx-auto needs-validation" novalidate="">
+    <form id="formContato" class="col-md-6 mx-auto needs-validation" novalidate>
+
+      <input type="hidden" name="_subject" value="Novo contato do site">
+
       <div class="mb-3">
         <label class="form-label" for="nome">Nome</label>
-        <input type="text" class="form-control" name="nome" required="">
+        <input type="text" id="nome" class="form-control" name="nome" required>
       </div>
 
       <div class="mb-3">
         <label class="form-label" for="email">E-mail</label>
-        <input type="email" class="form-control" name="email" required="">
+        <input type="email" id="email" class="form-control" name="email" required>
       </div>
 
       <div class="mb-3">
         <label class="form-label" for="tel">Telefone</label>
-        <input type="text" id="tel" class="form-control" name="tel" required="">
+        <input type="text" id="tel" class="form-control" name="tel" required>
       </div>
 
       <div class="mb-3">
-        <label class="form-label" for="mesage">Mensagem</label>
-        <textarea class="form-control" id="mesage" name="mensagem" rows="5" required=""></textarea>
+        <label class="form-label" for="mensagem">Mensagem</label>
+        <textarea id="mensagem" class="form-control" name="mensagem" rows="5" required></textarea>
       </div>
 
       <button class="btn btn-dark w-100" type="submit">Enviar</button>
@@ -882,42 +885,46 @@ setTimeout(() => {
   const form = document.getElementById('formContato');
   const successMessage = document.getElementById('formSuccess');
   const formEndpoint = 'https://formspree.io/f/mdkdojqa';
+  const submitBtn = form.querySelector('button[type="submit"]');
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
-    form.classList.add('was-validated');
 
+    form.classList.add('was-validated');
     if (!form.checkValidity()) return;
 
     const formData = new FormData(form);
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando...';
 
     try {
       const response = await fetch(formEndpoint, {
         method: 'POST',
         body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
+        headers: { 'Accept': 'application/json' }
       });
 
       if (response.ok) {
-        // Mostra mensagem de sucesso acima do formulário
         successMessage.classList.remove('d-none');
-
-        // Limpa campos e validação
         form.reset();
         form.classList.remove('was-validated');
       } else {
-        alert('Ocorreu um erro ao enviar sua mensagem. Tente novamente.');
+        const data = await response.json();
+        alert(data.errors?.[0]?.message || 'Erro ao enviar.');
       }
+
     } catch (error) {
-      alert('Erro de conexão. Verifique sua internet e tente novamente.');
+      alert('Erro de conexão. Verifique sua internet.');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Enviar';
     }
   });
 })();
 
 Inputmask({
-  mask: ["(99) 9999 9999", "(99) 99999 9999"],
+  mask: ["(99) 9999-9999", "(99) 99999-9999"],
   keepStatic: true
 }).mask("#tel");
 </script>
