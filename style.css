@@ -142,3 +142,57 @@ footer small{display:inline-block}
 @media(max-width:575.98px){html{scroll-padding-top:4.5rem}section{padding-block:3.5rem}#hero{min-height:76svh;padding-block:7rem 4rem;background-position:58% center}#hero .btn{margin:.35rem .35rem .35rem 0}.hero-image{min-height:14rem}#contato{padding-block:4rem}.nav-pills{gap:.4rem!important}.nav-pills .nav-link{padding:.45rem .8rem}.modal-dialog{margin:.5rem}}
 @media(max-height:500px) and (orientation:landscape){#hero{min-height:36rem;padding-block:6rem 3rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+
+/* Faixa de serviços logo abaixo do hero */
+#hero-services-strip{
+  position:relative;
+  z-index:1;
+  padding-block:1.35rem;
+  color:#fff;
+  background:#101010;
+  border-top:1px solid rgba(255,255,255,.12);
+}
+.hero-services-list{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  align-items:center;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.hero-service-item{
+  min-width:0;
+  min-height:3.5rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:.85rem;
+  padding:.35rem 1rem;
+  color:#f5f5f5;
+  font-size:.95rem;
+  font-weight:600;
+  line-height:1.35;
+  text-align:center;
+}
+.hero-service-item+.hero-service-item{
+  border-left:1px solid rgba(255,255,255,.35);
+}
+.hero-service-item i{
+  flex:0 0 auto;
+  color:#67c8f2;
+  font-size:1.65rem;
+  line-height:1;
+}
+@media(max-width:767.98px){
+  #hero-services-strip{padding-block:1rem}
+  .hero-services-list{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:.5rem}
+  .hero-service-item{justify-content:flex-start;padding:.65rem .75rem;font-size:.9rem;text-align:left}
+  .hero-service-item:nth-child(3){border-left:0}
+}
+@media(max-width:399.98px){
+  .hero-services-list{grid-template-columns:1fr}
+  .hero-service-item{min-height:2.8rem;padding:.5rem .25rem}
+  .hero-service-item+.hero-service-item{border-left:0;border-top:1px solid rgba(255,255,255,.16)}
+  .hero-service-item i{font-size:1.4rem}
+}
