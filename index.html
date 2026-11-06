@@ -24,7 +24,7 @@
 <body>
 
 <!-- ================= NAVBAR ================= -->
-<nav class="navbar navbar-expand-md fixed-top bg-light border-bottom">
+<nav class="navbar navbar-expand-lg fixed-top bg-light border-bottom">
   <div class="container-fluid">
     <a class="navbar-brand fw-bold" href="#hero">ChicoGui</a>
 
@@ -34,7 +34,7 @@
     </button>
 
     <div class="collapse navbar-collapse" id="mainNav">
-      <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link" href="#hero">Início</a></li>
         <li class="nav-item"><a class="nav-link" href="#areas">Atuação</a></li>
         <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
@@ -85,7 +85,7 @@
 </section>
 <div id="modaisServicos"></div>
 
-<section id="hero2" class="hero-image d-flex align-items-center justify-content-center text-center text-white" style="background-image: url('chicoDesk.png');">
+<section id="hero2" role="img" aria-label="Ambiente de trabalho e criação digital" class="hero-image d-flex align-items-center justify-content-center text-center text-white" style="background-image: url('chicoDesk.png');">
 </section>
 
 <!-- ================= METODOLOGIA ================= -->
@@ -99,66 +99,64 @@
 
 
   <div class="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-2">
-    <script>
-      const metodologia = [
-        {
-          icon: "search",
-          title: "Pesquisa",
-          text: "Inicio com imersão no universo do usuário. Realizo entrevistas, análises e levantamentos para entender o contexto real e embasar decisões com dados."
-        },
-        {
-          icon: "vector-pen",
-          title: "Projeto",
-          text: "Traduzo descobertas em interfaces acessíveis e intuitivas. Desenvolvo fluxos, wireframes e protótipos que guiam os usuários com clareza e propósito."
-        },
-        {
-          icon: "code-slash",
-          title: "Desenvolvimento",
-          text: "Implemento com foco em acessibilidade, performance e escalabilidade, usando HTML, CSS, JavaScript e boas práticas modernas de codificação."
-        },
-        {
-          icon: "check-circle",
-          title: "Testes",
-          text: "Valido com usuários reais, corrijo pontos de fricção e ajusto com base em dados. A testagem garante qualidade, clareza e confiança na solução."
-        },
-        {
-          icon: "rocket",
-          title: "Lançamento",
-          text: "Publico o projeto com atenção à performance, usabilidade e estabilidade. A entrega garante uma experiência fluida desde o primeiro acesso."
-        },
-        {
-          icon: "arrow-repeat",
-          title: "Melhoria Contínua",
-          text: "Após o lançamento, acompanho métricas e feedbacks para evoluir o projeto. As melhorias são guiadas por uso real e sempre orientadas ao valor entregue."
-        }
-      ];
-
-      document.write(metodologia.map((item) => `
-        <article class="col">
-            <div class="card h-100 p-4 shadow card-hover border-0 bg-white">
-
-              <div class="card-header-inline mb-3">
-                <div class="icon-circle text-dark">
-                  <i class="bi bi-${item.icon} fs-5" aria-hidden="true"></i>
-                </div>
-
-                <h3 class="h5 fw-bold text-dark mb-0">
-                  ${item.title}
-                </h3>
-              </div>
-
-              <p class="text-muted mb-0">
-                ${item.text}
-              </p>
-
-            </div>
-          </article>
-      `).join(''));
-    </script>
+    <article class="col">
+      <div class="card h-100 p-4 shadow card-hover border-0 bg-white">
+        <div class="card-header-inline mb-3">
+          <div class="icon-circle text-dark"><i class="bi bi-search fs-5" aria-hidden="true"></i></div>
+          <h3 class="h5 fw-bold text-dark mb-0">Pesquisa</h3>
+        </div>
+        <p class="text-muted mb-0">Inicio com imersão no universo do usuário. Realizo entrevistas, análises e levantamentos para entender o contexto real e embasar decisões com dados.</p>
+      </div>
+    </article>
+    <article class="col">
+      <div class="card h-100 p-4 shadow card-hover border-0 bg-white">
+        <div class="card-header-inline mb-3">
+          <div class="icon-circle text-dark"><i class="bi bi-vector-pen fs-5" aria-hidden="true"></i></div>
+          <h3 class="h5 fw-bold text-dark mb-0">Projeto</h3>
+        </div>
+        <p class="text-muted mb-0">Traduzo descobertas em interfaces acessíveis e intuitivas. Desenvolvo fluxos, wireframes e protótipos que guiam os usuários com clareza e propósito.</p>
+      </div>
+    </article>
+    <article class="col">
+      <div class="card h-100 p-4 shadow card-hover border-0 bg-white">
+        <div class="card-header-inline mb-3">
+          <div class="icon-circle text-dark"><i class="bi bi-code-slash fs-5" aria-hidden="true"></i></div>
+          <h3 class="h5 fw-bold text-dark mb-0">Desenvolvimento</h3>
+        </div>
+        <p class="text-muted mb-0">Implemento com foco em acessibilidade, performance e escalabilidade, usando HTML, CSS, JavaScript e boas práticas modernas de codificação.</p>
+      </div>
+    </article>
+    <article class="col">
+      <div class="card h-100 p-4 shadow card-hover border-0 bg-white">
+        <div class="card-header-inline mb-3">
+          <div class="icon-circle text-dark"><i class="bi bi-check-circle fs-5" aria-hidden="true"></i></div>
+          <h3 class="h5 fw-bold text-dark mb-0">Testes</h3>
+        </div>
+        <p class="text-muted mb-0">Valido com usuários reais, corrijo pontos de fricção e ajusto com base em dados. A testagem garante qualidade, clareza e confiança na solução.</p>
+      </div>
+    </article>
+    <article class="col">
+      <div class="card h-100 p-4 shadow card-hover border-0 bg-white">
+        <div class="card-header-inline mb-3">
+          <div class="icon-circle text-dark"><i class="bi bi-rocket fs-5" aria-hidden="true"></i></div>
+          <h3 class="h5 fw-bold text-dark mb-0">Lançamento</h3>
+        </div>
+        <p class="text-muted mb-0">Publico o projeto com atenção à performance, usabilidade e estabilidade. A entrega garante uma experiência fluida desde o primeiro acesso.</p>
+      </div>
+    </article>
+    <article class="col">
+      <div class="card h-100 p-4 shadow card-hover border-0 bg-white">
+        <div class="card-header-inline mb-3">
+          <div class="icon-circle text-dark"><i class="bi bi-arrow-repeat fs-5" aria-hidden="true"></i></div>
+          <h3 class="h5 fw-bold text-dark mb-0">Melhoria Contínua</h3>
+        </div>
+        <p class="text-muted mb-0">Após o lançamento, acompanho métricas e feedbacks para evoluir o projeto. As melhorias são guiadas por uso real e sempre orientadas ao valor entregue.</p>
+      </div>
+    </article>ipt>
   </div>
 </section>
 
-<section id="hero3" class="hero-image d-flex align-items-center justify-content-center text-center text-white" style="background-image: url('chicoDesk.png');">
+<section id="hero3" role="img" aria-label="Ambiente de trabalho e criação digital" class="hero-image d-flex align-items-center justify-content-center text-center text-white" style="background-image: url('chicoDesk.png');">
 </section>
 
 <!-- ================= SOBRE ================= -->
@@ -328,16 +326,17 @@
 
 <section id="contato" class="text-white" style="background:url('chicoContato.png') center/cover;">
   <div class="container">
-    <h1 class="text-center mb-4">Vamos conversar</h1>
+    <h2 class="text-center mb-4">Vamos conversar</h2>
     <h4 class="text-center mb-4">
       Tem um projeto, produto ou experiência digital que precisa ser melhorado?
     </h4>
 
-    <div id="formSuccess" class="alert alert-success d-none text-center">
+    <div id="formSuccess" class="alert alert-success d-none text-center" role="status" aria-live="polite">
       Mensagem enviada com sucesso! 🚀
     </div>
 
-    <form id="formContato" class="col-md-6 mx-auto needs-validation" novalidate>
+    <div id="formError" class="alert alert-danger d-none text-center" role="alert" aria-live="assertive"></div>
+    <form id="formContato" class="col-12 col-md-8 col-lg-6 mx-auto needs-validation" novalidate>
 
       <input type="hidden" name="_subject" value="Novo contato do site">
 
@@ -564,7 +563,7 @@ const servicos = [
 document.getElementById("cardsServicos").innerHTML = servicos.map(item => `
   <article class="col">
     <div class="card h-100 shadow card-hover border-0 bg-white">
-      <img src="${item.image}" class="card-img-top" alt="${item.text}">
+      <img src="${item.image}" class="card-img-top" alt="${item.text}" loading="lazy" decoding="async" width="640" height="400">
       
       <div class="card-body">
         <div class="card-header-inline mb-3">
@@ -652,6 +651,7 @@ modais.forEach((modalEl, index) => {
 (() => {
   const form = document.getElementById('formContato');
   const successMessage = document.getElementById('formSuccess');
+  const errorMessage = document.getElementById('formError');
   const formEndpoint = 'https://formspree.io/f/mdkdojqa';
   const submitBtn = form.querySelector('button[type="submit"]');
 
@@ -659,6 +659,8 @@ modais.forEach((modalEl, index) => {
     event.preventDefault();
 
     form.classList.add('was-validated');
+    errorMessage.classList.add('d-none');
+    successMessage.classList.add('d-none');
     if (!form.checkValidity()) return;
 
     const formData = new FormData(form);
@@ -679,11 +681,13 @@ modais.forEach((modalEl, index) => {
         form.classList.remove('was-validated');
       } else {
         const data = await response.json();
-        alert(data.errors?.[0]?.message || 'Erro ao enviar.');
+        errorMessage.textContent = data.errors?.[0]?.message || 'Falha ao enviar mensagem. Tente novamente.';
+        errorMessage.classList.remove('d-none');
       }
 
     } catch (error) {
-      alert('Erro de conexão. Verifique sua internet.');
+      errorMessage.textContent = 'Erro de conexão. Verifique sua internet e tente novamente.';
+      errorMessage.classList.remove('d-none');
     } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = 'Enviar';
