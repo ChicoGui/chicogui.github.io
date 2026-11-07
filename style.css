@@ -453,7 +453,7 @@ section:not(#hero):not(#contato) > .container > h2{
   letter-spacing:-.05em;
   line-height:1.08;
 }
-#contato h4{
+#contato h3{
   max-width:42ch;
   margin:0 auto clamp(1.75rem,4vw,2.5rem)!important;
   color:rgba(255,255,255,.84);
@@ -485,7 +485,7 @@ section:not(#hero):not(#contato) > .container > h2{
   font-size:.98rem;
   line-height:1.75;
 }
-.modal-body h6{
+.modal-body h3{
   margin-block:1.25rem .65rem;
   color:var(--brand-ink);
   font-size:.95rem;
@@ -514,7 +514,7 @@ footer small{
   section:not(#hero):not(#contato) > .container > h2{
     margin-bottom:1.5rem;
   }
-  #contato h4{max-width:32ch}
+  #contato h3{max-width:32ch}
   .card p{font-size:.93rem}
 }
 
