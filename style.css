@@ -256,3 +256,90 @@ footer small{display:inline-block}
  .profile-tabs-card{padding:.7rem}
  .profile-tabs-nav .nav-link{font-size:.78rem}
 }
+
+
+/* ===== Identidade cromática: títulos e ações ===== */
+:root{
+  --brand-ink:#17191d;
+  --brand-muted:#59636d;
+  --brand-blue:#238fc0;
+  --brand-blue-bright:#67c8f2;
+  --brand-blue-soft:#e8f6fc;
+  --brand-surface:#f5f6f7;
+  --brand-white:#fff;
+  --button-primary-bg:var(--brand-ink);
+  --button-primary-hover:#303943;
+  --button-primary-text:#fff;
+  --button-accent-bg:var(--brand-blue);
+  --button-accent-hover:#1878a5;
+  --button-accent-text:#fff;
+  --button-border:var(--brand-ink);
+}
+/* Títulos seguem o mesmo padrão em todas as seções claras. */
+section:not(#hero):not(#contato) h2{
+  color:var(--brand-ink);
+}
+section:not(#hero):not(#contato) h2 span,
+section:not(#hero):not(#contato) h3 span{
+  color:var(--brand-blue);
+}
+section:not(#hero):not(#contato) h3{
+  color:var(--brand-ink);
+}
+/* Acentos sobre fundos escuros mantêm contraste e identidade. */
+#hero h1 span,#hero .hero-eyebrow,
+#contato h2 span,footer a:hover{
+  color:var(--brand-blue-bright);
+}
+/* Botões reutilizam apenas as três variantes da identidade. */
+.btn-site-primary{
+  color:var(--button-primary-text);
+  background:var(--button-primary-bg);
+  border-color:var(--button-primary-bg);
+}
+.btn-site-primary:hover,.btn-site-primary:focus-visible{
+  color:var(--button-primary-text);
+  background:var(--button-primary-hover);
+  border-color:var(--button-primary-hover);
+}
+.btn-site-secondary{
+  color:var(--brand-ink);
+  background:transparent;
+  border-color:var(--brand-ink);
+}
+.btn-site-secondary:hover,.btn-site-secondary:focus-visible{
+  color:#fff;
+  background:var(--brand-ink);
+  border-color:var(--brand-ink);
+}
+.btn-site-accent{
+  color:var(--button-accent-text);
+  background:var(--button-accent-bg);
+  border-color:var(--button-accent-bg);
+}
+.btn-site-accent:hover,.btn-site-accent:focus-visible{
+  color:#fff;
+  background:var(--button-accent-hover);
+  border-color:var(--button-accent-hover);
+}
+#hero .btn-site-primary{
+  color:#10212a;
+  background:var(--brand-blue-bright);
+  border-color:var(--brand-blue-bright);
+}
+#hero .btn-site-primary:hover{
+  color:#10212a;
+  background:#8bd7f8;
+  border-color:#8bd7f8;
+}
+.btn-site:focus-visible,
+.nav-pills .nav-link:focus-visible,
+.profile-tabs-nav .nav-link:focus-visible{
+  outline:3px solid var(--brand-blue);
+  outline-offset:3px;
+  box-shadow:none;
+}
+.nav-pills .nav-link{border-color:var(--brand-ink);color:var(--brand-ink)}
+.nav-pills .nav-link.active{border-color:var(--brand-ink);background:var(--brand-ink);color:#fff}
+.profile-tabs-nav .nav-link.active{border-color:var(--brand-ink);background:var(--brand-ink);color:#fff}
+.profile-tab-content .accordion-button:not(.collapsed){background:var(--brand-blue-soft);color:#176d92}
