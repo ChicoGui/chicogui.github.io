@@ -517,3 +517,10 @@ footer small{
   #contato h4{max-width:32ch}
   .card p{font-size:.93rem}
 }
+
+
+/* Hero: título integralmente branco, mantendo o azul nos demais acentos. */
+#hero h1,
+#hero h1 span{
+  color:#fff;
+}
