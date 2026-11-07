@@ -18,7 +18,7 @@
 
 
   <link rel="preload" as="image" href="/chicoOffice-q88.webp?v=20261107-3" fetchpriority="high">
-  <link href="style.css?v=20261107-4" rel="stylesheet">
+  <link href="style.css?v=20261107-5" rel="stylesheet">
 
 </head>
 
@@ -182,24 +182,37 @@
 </section>
 
 <!-- ================= SOBRE ================= -->
-<section id="sobre" class="bg-light reveal">
+<section id="sobre" class="about-section bg-light reveal">
   <div class="container">
-    <h2 class="text-center mb-5">Minha trajetória</h2>
+    <header class="about-heading">
+      <p class="about-kicker">SOBRE MIM <span aria-hidden="true">/</span> TRAJETÓRIA PROFISSIONAL</p>
+      <h2>Uma trajetória entre <span>design</span> e tecnologia.</h2>
+    </header>
 
-    <article id="bio" class="mb-5">
+    <div class="about-intro">
+      <article id="bio" class="about-bio">
+        <p class="about-lead">Acredito em experiências digitais que fazem sentido para quem usa — e funcionam bem para quem precisa delas.</p>
+        <p>Desde 2009, atuo na interseção entre design e desenvolvimento web. Ao longo desse percurso, colaborei com agências, empresas e instituições dos setores público e privado, conectando visão de produto, experiência do usuário e implementação.</p>
+        <p>Meu trabalho combina arquitetura da informação, UX/UI e desenvolvimento front-end para transformar necessidades complexas em soluções claras, acessíveis, responsivas e eficientes.</p>
+      </article>
 
-        <p>Desde 2009, atuo como designer e desenvolvedor web criando experiências digitais funcionais, acessíveis e centradas nas pessoas. Ao longo da minha trajetória, participei de projetos em diferentes contextos — de pequenas agências a grandes instituições, nos setores público e privado.</p>
-      <p>
-        Minha atuação é guiada por princípios de arquitetura da informação, usabilidade e experiência do usuário. Acredito que o design deve facilitar a comunicação e o uso, indo além da estética, com foco em acessibilidade, responsividade e clareza.</p>
-      <p>
-        Com forte domínio em desenvolvimento front-end, desenvolvo sites e aplicações com estrutura sólida, código limpo e foco em performance. Mais do que interfaces, busco criar soluções digitais simples, inclusivas e significativas.</p>
+      <aside class="about-highlight" aria-label="Resumo profissional">
+        <span class="about-highlight-index" aria-hidden="true">01 / PERFIL</span>
+        <strong class="about-highlight-number">15<span>+</span></strong>
+        <span class="about-highlight-caption">anos de experiência</span>
+        <span class="about-highlight-divider" aria-hidden="true"></span>
+        <p>Do entendimento do problema à construção da experiência digital.</p>
+        <div class="about-highlight-tags">
+          <span>Estratégia</span><span>UX/UI</span><span>Front-end</span>
+        </div>
+      </aside>
+    </div>
 
-  </article>
-
-  <section id="tabs" class="container mt-5">
+  <div id="tabs" class="profile-details mt-5">
+    <div class="profile-tabs-card">
 
   <!-- NAV PILLS -->
-  <ul class="nav nav-pills justify-content-center gap-2" id="profileTabs" role="tablist">
+  <ul class="nav nav-pills profile-tabs-nav" id="profileTabs" role="tablist" aria-label="Informações profissionais">
 
     <li class="nav-item" role="presentation">
       <button 
@@ -245,9 +258,10 @@
 
   </ul>
 
-<!-- CONTENT --> <div class="tab-content mt-4">
+      <!-- Conteúdo das abas -->
+      <div class="tab-content profile-tab-content mt-4">
   <!-- HABILIDADES --> 
-  <div class="tab-pane fade show active" id="habilidades"> 
+  <div class="tab-pane fade show active" id="habilidades" role="tabpanel" aria-labelledby="habilidades-tab" tabindex="0"> 
     <!-- Design e Prototipação --> 
     <article class="mb-3"> 
       <h3 class="h6">Design e Prototipação</h3> 
@@ -312,14 +326,14 @@
     <!--article class="mb-3"> <h3 class="h6">Soft Skills</h3> <ul class="list-unstyled d-flex flex-wrap gap-2"> <li class="badge rounded-pill bg-info text-dark">Comunicação clara</li> <li class="badge rounded-pill bg-info text-dark">Trabalho em equipe</li> <li class="badge rounded-pill bg-info text-dark">Gestão de tempo</li> <li class="badge rounded-pill bg-info text-dark">Resolução de problemas</li> <li class="badge rounded-pill bg-info text-dark">Pensamento analítico</li> <li class="badge rounded-pill bg-info text-dark">Criatividade</li> <li class="badge rounded-pill bg-info text-dark">Aprendizado contínuo</li> <li class="badge rounded-pill bg-info text-dark">Autonomia</li> <li class="badge rounded-pill bg-info text-dark">Empatia com usuários</li> </ul> </article--> </div> 
   
   <!-- FORMAÇÃO --> 
-  <div class="tab-pane fade" id="formacao">
+  <div class="tab-pane fade" id="formacao" role="tabpanel" aria-labelledby="formacao-tab" tabindex="0">
     <ul class="list-group list-group-flush border rounded shadow-sm"> 
       <li class="list-group-item"> <strong>Pós Graduando em Gestão ágil e Desenvolvimento de Software</strong><br> 
     Universidade Anhanguera<br> conclusão em julho de 2026 </li> <li class="list-group-item"> <strong>Pós Graduando em Design de Produtos Digitais - UX/UI</strong><br> Universidade Anhanguera<br> conclusão em julho de 2026 </li> <li class="list-group-item"> <strong>Bacharelado em Desenho Industrial</strong><br> Universidade Federal do Espírito Santo (UFES)<br> 2009 – 2017 </li> 
   </ul> 
   </div> 
   <!-- EXPERIÊNCIA --> 
-  <div class="tab-pane fade" id="experiencia"> 
+  <div class="tab-pane fade" id="experiencia" role="tabpanel" aria-labelledby="experiencia-tab" tabindex="0"> 
     <div class="accordion accordion-flush" id="accordionFlushExperience"> 
       
       <div class="accordion-item"> 
@@ -341,8 +355,8 @@
         </div> 
         </div> 
         </div> 
-  </section>
-
+    </div>
+  </div>
   </div>
 </section>
 
