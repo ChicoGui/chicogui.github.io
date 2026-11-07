@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17191d">
+  <meta name="color-scheme" content="light">
 
   <title>Francisco Guilherme | UX/UI Designer & Desenvolvedor Web</title>
 
@@ -18,14 +20,15 @@
 
 
   <link rel="preload" as="image" href="/chicoOffice-q88.webp?v=20261107-3" fetchpriority="high">
-  <link href="style.css?v=20261107-10" rel="stylesheet">
+  <link href="style.css?v=20261107-11" rel="stylesheet">
 
 </head>
 
 <body>
+<a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
 
 <!-- ================= NAVBAR ================= -->
-<nav class="navbar navbar-expand-lg fixed-top bg-light border-bottom">
+<nav class="navbar navbar-expand-lg fixed-top bg-light border-bottom" aria-label="Navegação principal">
   <div class="container-fluid">
     <a class="navbar-brand fw-bold" href="#hero">ChicoGui</a>
 
@@ -47,14 +50,14 @@
   </div>
 </nav>
 
-<main>
+<main id="conteudo-principal">
 
 <!-- ================= HERO ================= -->
-<section id="hero" class="text-white">
+<section id="hero" class="text-white" aria-labelledby="hero-title">
   <div class="container reveal">
     <div class="hero-copy">
       <p class="hero-eyebrow">PRODUCT DESIGN <span aria-hidden="true">·</span> UX/UI <span aria-hidden="true">·</span> DESENVOLVIMENTO WEB</p>
-      <h1 class="fw-bold mb-3">Design, tecnologia e experiência <span>humana.</span></h1>
+      <h1 id="hero-title" class="fw-bold mb-3">Design, tecnologia e experiência <span>humana.</span></h1>
       <p class="hero-description">Transformo ideias em soluções digitais funcionais, acessíveis e intuitivas — unindo estratégia, UX/UI e desenvolvimento web.</p>
       <div class="hero-actions">
         <a href="#contato" class="btn btn-site btn-site-primary btn-site-lg">Vamos conversar?</a>
@@ -89,9 +92,9 @@
 </section>
 
 <!-- ================= ÁREAS DE ATUAÇÃO ================= -->
-<section id="areas" class="reveal">
+<section id="areas" class="reveal" aria-labelledby="areas-title">
   <div class="container">
-    <h2 class="text-center mb-5">Estratégia + Design + Tecnologia</h2>
+    <h2 id="areas-title" class="text-center mb-5">Estratégia + Design + Tecnologia</h2>
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="cardsAreas"></div>
   </div>
 </section>
@@ -112,11 +115,11 @@
 
 <!-- ================= METODOLOGIA ================= -->
 
-  <section id="metodologia" class="methodology-section reveal">
+  <section id="metodologia" class="methodology-section reveal" aria-labelledby="metodologia-title">
   <div class="container">
     <header class="methodology-heading">
       <p class="methodology-eyebrow">COMO EU TRABALHO</p>
-      <h2>Da ideia à evolução.</h2>
+      <h2 id="metodologia-title">Da ideia à evolução.</h2>
       <p>Um processo integrado que transforma necessidades reais em experiências digitais funcionais, acessíveis e relevantes.</p>
     </header>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3 methodology-grid">
@@ -152,11 +155,11 @@
 </section>
 
 <!-- ================= SOBRE ================= -->
-<section id="sobre" class="about-section bg-light reveal">
+<section id="sobre" class="about-section bg-light reveal" aria-labelledby="sobre-title">
   <div class="container">
     <header class="about-heading">
       <p class="about-kicker">SOBRE MIM <span aria-hidden="true">/</span> TRAJETÓRIA PROFISSIONAL</p>
-      <h2>Uma trajetória entre <span>design</span> e tecnologia.</h2>
+      <h2 id="sobre-title">Uma trajetória entre <span>design</span> e tecnologia.</h2>
     </header>
 
     <div class="about-intro">
@@ -342,28 +345,29 @@
     </div>
 
     <div id="formError" class="alert alert-danger d-none text-center" role="alert" aria-live="assertive"></div>
-    <form id="formContato" class="col-12 col-md-8 col-lg-6 mx-auto needs-validation" novalidate>
+    <form id="formContato" class="col-12 col-md-8 col-lg-6 mx-auto needs-validation" novalidate aria-describedby="formHint">
+      <p id="formHint" class="visually-hidden">Todos os campos são obrigatórios. Preencha os dados para enviar sua mensagem.</p>
 
       <input type="hidden" name="_subject" value="Novo contato do site">
 
       <div class="mb-3">
         <label class="form-label" for="nome">Nome</label>
-        <input type="text" id="nome" class="form-control" name="nome" required>
+        <input type="text" id="nome" class="form-control" name="nome" autocomplete="name" required>
       </div>
 
       <div class="mb-3">
         <label class="form-label" for="email">E-mail</label>
-        <input type="email" id="email" class="form-control" name="email" required>
+        <input type="email" id="email" class="form-control" name="email" autocomplete="email" inputmode="email" required>
       </div>
 
       <div class="mb-3">
         <label class="form-label" for="tel">Telefone</label>
-        <input type="text" id="tel" class="form-control" name="tel" required>
+        <input type="tel" id="tel" class="form-control" name="tel" autocomplete="tel" inputmode="tel" required>
       </div>
 
       <div class="mb-3">
         <label class="form-label" for="mensagem">Mensagem</label>
-        <textarea id="mensagem" class="form-control" name="mensagem" rows="5" required></textarea>
+        <textarea id="mensagem" class="form-control" name="mensagem" rows="5" autocomplete="off" required></textarea>
       </div>
 
       <button class="btn btn-site btn-site-primary w-100" type="submit">Enviar</button>
@@ -430,7 +434,7 @@ document.getElementById('cardsAreas').innerHTML = areas.map(area => `
 
       <div class="card-header-inline mb-3">
         <div class="icon-circle text-dark">
-          <i class="bi bi-${area.icon} fs-5"></i>
+          <i class="bi bi-${area.icon} fs-5" aria-hidden="true"></i>
         </div>
 
         <h3 class="h5 fw-bold text-dark mb-0">
@@ -569,7 +573,7 @@ const servicos = [
 document.getElementById("cardsServicos").innerHTML = servicos.map(item => `
   <article class="col">
     <div class="card h-100 shadow card-hover border-0 bg-white">
-      <img src="${item.image}" class="card-img-top" alt="${item.text}" loading="lazy" decoding="async" width="640" height="400">
+      <img src="${item.image}" class="card-img-top" alt="" loading="lazy" decoding="async" width="640" height="400">
       
       <div class="card-body">
         <div class="card-header-inline mb-3">
@@ -605,7 +609,7 @@ document.getElementById("modaisServicos").innerHTML = servicos.map(item => `
           <h5 class="modal-title" id="${item.id}-title">
             ${item.modal.title}
           </h5>
-          <button class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar janela"></button>
         </div>
 
         <div class="modal-body">
@@ -613,8 +617,8 @@ document.getElementById("modaisServicos").innerHTML = servicos.map(item => `
           ${item.modal.conteudo}
           
           <div class="modal-navigation d-flex justify-content-between mt-4">
-            <button class="btn btn-site btn-site-secondary prev-btn">← Anterior</button>
-            <button class="btn btn-site btn-site-primary next-btn">Próximo →</button>
+            <button type="button" class="btn btn-site btn-site-secondary prev-btn" aria-label="Ver serviço anterior">← Anterior</button>
+            <button type="button" class="btn btn-site btn-site-primary next-btn" aria-label="Ver próximo serviço">Próximo →</button>
           </div>
         </div>
 
