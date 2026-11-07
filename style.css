@@ -99,7 +99,7 @@ p{font-size:clamp(1rem,2.2vw,1.1rem)}
 .navbar .nav-link{padding:.65rem .8rem}
 .navbar-toggler{padding:.4rem .6rem}
 .navbar-toggler:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #67c8f2;outline-offset:3px;box-shadow:none}
-#hero{position:relative;isolation:isolate;display:flex;align-items:center;min-height:min(760px,82svh);padding-block:clamp(7rem,14vh,10rem);overflow:hidden;color:#fff;background-color:#101318;background-image:linear-gradient(90deg,rgba(8,10,14,.88) 0%,rgba(8,10,14,.68) 48%,rgba(8,10,14,.24) 100%),url("chicoOffice-q88.webp");background-position:center 45%;background-size:cover;background-repeat:no-repeat}
+#hero{position:relative;isolation:isolate;display:flex;align-items:center;min-height:min(760px,82svh);padding-block:clamp(7rem,14vh,10rem);overflow:hidden;color:#fff;background-color:#101318;background-image:linear-gradient(90deg,rgba(8,10,14,.88) 0%,rgba(8,10,14,.68) 48%,rgba(8,10,14,.24) 100%),url("/chicoOffice-q88.webp?v=20261107-3");background-position:center 45%;background-size:cover;background-repeat:no-repeat}
 #hero .container{position:relative;z-index:1;max-width:760px}
 #hero h1{max-width:17ch;text-wrap:balance}
 #hero h3{font-size:clamp(1.2rem,3vw,1.65rem);text-wrap:balance}
@@ -140,7 +140,7 @@ footer small{display:inline-block}
 @media(min-width:768px){.modal-navigation{flex-direction:row;justify-content:space-between}.modal-navigation .btn{width:auto;min-width:8.75rem}}
 @media(min-width:992px){#hero{min-height:min(800px,84svh);background-position:center 42%}.hero-image{min-height:clamp(22rem,38vw,36rem)}}
 @media(max-width:991.98px){.navbar-collapse{padding-block:.75rem .25rem}.navbar-nav .nav-link{padding-inline:.25rem}}
-@media(max-width:575.98px){html{scroll-padding-top:4.5rem}section{padding-block:3.5rem}#hero{min-height:76svh;min-height:max(76svh,36rem);padding-block:7rem 4rem;background-image:linear-gradient(90deg,rgba(8,10,14,.86),rgba(8,10,14,.58)),url("chicoOffice-q88.webp");background-position:62% center}#hero h1{max-width:15ch}#hero .btn{margin:.35rem .35rem .35rem 0}.hero-image{min-height:14rem}#contato{padding-block:4rem}.nav-pills{gap:.4rem!important}.nav-pills .nav-link{padding:.45rem .8rem}.modal-dialog{margin:.5rem}}
+@media(max-width:575.98px){html{scroll-padding-top:4.5rem}section{padding-block:3.5rem}#hero{min-height:76svh;min-height:max(76svh,36rem);padding-block:7rem 4rem;background-image:linear-gradient(90deg,rgba(8,10,14,.86),rgba(8,10,14,.58)),url("/chicoOffice-q88.webp?v=20261107-3");background-position:62% center}#hero h1{max-width:15ch}#hero .btn{margin:.35rem .35rem .35rem 0}.hero-image{min-height:14rem}#contato{padding-block:4rem}.nav-pills{gap:.4rem!important}.nav-pills .nav-link{padding:.45rem .8rem}.modal-dialog{margin:.5rem}}
 @media(max-height:500px) and (orientation:landscape){#hero{min-height:36rem;padding-block:6rem 3rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 
