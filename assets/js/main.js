@@ -273,12 +273,26 @@ modais.forEach((modalEl, index) => {
     if (index < servicos.length - 1) navigateToModal(index + 1);
   });
 
-  // Fecha a modal antes de navegar até o formulário de contato.
-  modalEl.querySelector('.modal-contact-cta')?.addEventListener('click', (event) => {
+  // Qualquer CTA da modal fecha a janela e leva ao formulário de contato.
+  modalEl.addEventListener('click', (event) => {
+    const contactCta = event.target.closest('.modal-contact-cta');
+    if (!contactCta) return;
+
     event.preventDefault();
 
     modalEl.addEventListener('hidden.bs.modal', () => {
-      window.location.hash = 'contato';
+      const contactSection = document.getElementById('contato');
+      const firstField = document.getElementById('nome');
+
+      if (!contactSection) {
+        window.location.hash = 'contato';
+        return;
+      }
+
+      // Atualiza a URL sem provocar uma rolagem abrupta.
+      window.history.replaceState(null, '', '#contato');
+      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      firstField?.focus({ preventScroll: true });
     }, { once: true });
 
     bootstrap.Modal.getOrCreateInstance(modalEl).hide();
