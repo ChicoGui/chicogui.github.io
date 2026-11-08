@@ -828,3 +828,18 @@ section:not(#hero):not(#contato) h3 span,
 #metodologia .methodology-eyebrow{
   color:var(--section-icon-blue)!important;
 }
+
+
+/* Destaques seletivos nos títulos: azul apenas nos sinais e palavras definidos. */
+#areas h2.areas-title{
+  color:#17191d!important;
+}
+#areas h2.areas-title .title-plus{
+  color:var(--heading-blue,#176b91)!important;
+}
+#sobre h2#sobre-title{
+  color:#17191d!important;
+}
+#sobre h2#sobre-title .title-blue-word{
+  color:var(--heading-blue,#176b91)!important;
+}
