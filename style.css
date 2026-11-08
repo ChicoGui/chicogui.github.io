@@ -948,3 +948,54 @@ section:not(#hero):not(#hero-services-strip):not(#hero2):not(#hero3) > .containe
     text-align:center;
   }
 }
+
+
+/* Links da faixa de serviços: aparência integrada e foco acessível. */
+.hero-service-link{
+  display:flex;
+  align-items:center;
+  justify-content:inherit;
+  gap:.65rem;
+  width:100%;
+  min-height:2.75rem;
+  padding:0;
+  border:0;
+  border-radius:.25rem;
+  background:transparent;
+  color:inherit;
+  font:inherit;
+  font-weight:600;
+  text-align:inherit;
+  cursor:pointer;
+  transition:color .2s ease,opacity .2s ease;
+}
+.hero-service-link>i:first-child{
+  flex:0 0 1.75rem;
+  width:1.75rem;
+  text-align:center;
+}
+.hero-service-link .service-link-arrow{
+  margin-left:auto;
+  font-size:.8em;
+  opacity:.65;
+  transition:transform .2s ease,opacity .2s ease;
+}
+.hero-service-link:hover{
+  color:#fff;
+  opacity:.88;
+}
+.hero-service-link:hover .service-link-arrow{
+  opacity:1;
+  transform:translate(2px,-2px);
+}
+.hero-service-link:focus-visible{
+  outline:3px solid var(--focus-ring,#7dd3fc);
+  outline-offset:4px;
+  border-radius:.2rem;
+}
+@media(hover:hover) and (pointer:fine){
+  .hero-service-link:hover{ text-decoration:underline; text-underline-offset:.2em; }
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-service-link,.hero-service-link .service-link-arrow{transition:none}
+}
