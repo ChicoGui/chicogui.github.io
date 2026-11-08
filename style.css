@@ -390,9 +390,13 @@ section:not(#hero):not(#contato) > .container > h2{
   font-weight:800;
   letter-spacing:-.045em;
 }
+/* Títulos de todos os cards seguem a mesma cor da identidade visual. */
+.card :is(h2,h3,h4,h5,.h5,.card-title){
+  color:var(--brand-ink)!important;
+}
 .card h3,.card .h5{
   margin:0;
-  color:var(--brand-ink);
+  color:var(--brand-ink)!important;
   font-size:1.05rem;
   font-weight:750;
   letter-spacing:-.025em;
