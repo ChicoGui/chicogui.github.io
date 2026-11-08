@@ -707,9 +707,26 @@ section[id]{
   outline:3px solid var(--focus-ring);
   outline-offset:3px;
 }
+/* Navegação entre modais: contorno azul nos controles disponíveis. */
+.modal-navigation .btn-site-secondary{
+  color:var(--brand-blue);
+  background:transparent;
+  border-color:var(--brand-blue);
+}
+.modal-navigation .btn-site-secondary:hover:not(:disabled),
+.modal-navigation .btn-site-secondary:focus-visible:not(:disabled){
+  color:#fff;
+  background:var(--brand-blue);
+  border-color:var(--brand-blue);
+}
 .modal-navigation .btn:disabled{
-  opacity:.55;
+  color:#7b8490;
+  background:#f1f3f5;
+  border-color:#cbd2d9;
+  opacity:.7;
   cursor:not-allowed;
+  pointer-events:none;
+  box-shadow:none;
 }
 .profile-tabs-nav .nav-link{
   min-height:2.75rem;
