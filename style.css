@@ -782,3 +782,49 @@ footer{
     scroll-behavior:auto!important;
   }
 }
+
+
+/* ===== Unidade visual: títulos azuis e ícones de Atuação/Metodologia ===== */
+:root{
+  --heading-blue:var(--brand-blue-accessible,#176b91);
+  --section-icon-blue:var(--brand-blue-accessible,#176b91);
+  --section-icon-bg:var(--brand-blue-soft,#e8f6fc);
+}
+/* Títulos em superfícies claras usam azul com contraste acessível. */
+h1,h2,h3,h4,h5,h6,
+.card .card-title,
+.modal-title,
+.profile-tab-content h3{
+  color:var(--heading-blue)!important;
+}
+/* Áreas de fundo escuro preservam títulos claros para manter contraste. */
+#hero h1,
+#hero h1 span,
+#contato h2,
+#contato h3{
+  color:#fff!important;
+}
+/* Destaques tipográficos continuam azuis, sem criar cores concorrentes. */
+section:not(#hero):not(#contato) h2 span,
+section:not(#hero):not(#contato) h3 span,
+.about-heading h2 span{
+  color:var(--heading-blue)!important;
+}
+/* Atuação e Metodologia compartilham exatamente o mesmo tratamento de ícones. */
+#areas .icon-circle,
+#metodologia .method-step-icon{
+  background:var(--section-icon-bg)!important;
+  color:var(--section-icon-blue)!important;
+}
+#areas .icon-circle i,
+#metodologia .method-step-icon i{
+  color:var(--section-icon-blue)!important;
+}
+#areas .card-header-inline h3,
+#metodologia .method-step-top h3{
+  color:var(--heading-blue)!important;
+}
+#metodologia .method-step-number,
+#metodologia .methodology-eyebrow{
+  color:var(--section-icon-blue)!important;
+}
