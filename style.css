@@ -843,3 +843,9 @@ section:not(#hero):not(#contato) h3 span,
 #sobre h2#sobre-title .title-blue-word{
   color:var(--heading-blue,#176b91)!important;
 }
+
+
+/* Mantém o título da metodologia em preto, conforme a hierarquia cromática definida. */
+#metodologia .methodology-heading h2{
+  color:#17191d!important;
+}
