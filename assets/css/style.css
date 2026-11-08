@@ -1030,6 +1030,7 @@ section:not(#hero):not(#hero-services-strip):not(#hero2):not(#hero3) > .containe
 html{
   scroll-padding-top:calc(var(--site-nav-height) + 1rem);
 }
+section[id]{scroll-margin-top:0;}
 
 /* Ritmo vertical uniforme; Hero e faixas visuais mantêm tratamento próprio. */
 section:not(#hero):not(#hero-services-strip):not(.hero-image){
