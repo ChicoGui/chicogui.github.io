@@ -3,22 +3,54 @@ document.getElementById("ano").textContent = new Date().getFullYear();
 /* ====== Navegação ===== */
 
 document.addEventListener("DOMContentLoaded", function () {
+  const navbar = document.querySelector('.navbar');
   const navbarCollapse = document.getElementById('mainNav');
-  const navLinks = document.querySelectorAll('.nav-link');
   const toggler = document.querySelector('.navbar-toggler');
+  const navLinks = document.querySelectorAll('.navbar .nav-link, .navbar .navbar-brand[href^="#"]');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-  
+  // Mede a altura real do cabeçalho em cada breakpoint e quando o menu abre.
+  const updateNavOffset = () => {
+    if (!navbar) return;
+    const height = Math.ceil(navbar.getBoundingClientRect().height);
+    document.documentElement.style.setProperty('--site-nav-height', height + 'px');
+  };
 
+  updateNavOffset();
+  if ('ResizeObserver' in window && navbar) {
+    const navObserver = new ResizeObserver(updateNavOffset);
+    navObserver.observe(navbar);
+  } else {
+    window.addEventListener('resize', updateNavOffset, { passive: true });
+  }
 
   navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      // Só fecha se o menu estiver aberto no mobile
-      if (window.getComputedStyle(toggler).display !== 'none') {
-        const bsCollapse =
-          bootstrap.Collapse.getInstance(navbarCollapse) ||
-          new bootstrap.Collapse(navbarCollapse, { toggle: false });
+    link.addEventListener('click', event => {
+      const hash = link.getAttribute('href');
+      if (!hash || !hash.startsWith('#')) return;
 
-        bsCollapse.hide();
+      const target = document.getElementById(decodeURIComponent(hash.slice(1)));
+      if (!target) return;
+
+      const mobileMenuIsOpen =
+        navbarCollapse &&
+        toggler &&
+        window.getComputedStyle(toggler).display !== 'none' &&
+        navbarCollapse.classList.contains('show');
+
+      // Em telas com menu expansível, aguarda o fechamento antes de rolar.
+      if (mobileMenuIsOpen) {
+        event.preventDefault();
+        const collapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+        navbarCollapse.addEventListener('hidden.bs.collapse', () => {
+          updateNavOffset();
+          window.history.pushState(null, '', hash);
+          target.scrollIntoView({
+            behavior: reduceMotion.matches ? 'auto' : 'smooth',
+            block: 'start'
+          });
+        }, { once: true });
+        collapse.hide();
       }
     });
   });
