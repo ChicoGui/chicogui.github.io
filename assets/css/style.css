@@ -530,11 +530,12 @@ footer small{
 }
 
 
-/* Desktop: hero e faixa de serviços permanecem visíveis na primeira tela. */
+/* Desktop/notebook: a Hero ocupa toda a altura visível; a faixa vem logo depois. */
 @media(min-width:992px){
   #hero{
-    min-height:clamp(400px,calc(100svh - 11rem),540px);
-    padding-block:clamp(3.5rem,7vh,5rem);
+    min-height:100vh;
+    min-height:100svh;
+    padding-block:clamp(6rem,12vh,8rem) clamp(3rem,7vh,5rem);
   }
   #hero-services-strip{
     padding-block:.55rem;
