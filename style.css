@@ -849,3 +849,19 @@ section:not(#hero):not(#contato) h3 span,
 #metodologia .methodology-heading h2{
   color:#17191d!important;
 }
+
+
+/* Subtítulo da seção Atuação */
+#areas .areas-subtitle{
+  max-width: 680px;
+  margin-top: -1.75rem;
+  color: var(--text-muted, #62676d);
+  line-height: 1.7;
+}
+
+@media (max-width: 575.98px){
+  #areas .areas-subtitle{
+    margin-top: -1.5rem;
+    padding-inline: .5rem;
+  }
+}
