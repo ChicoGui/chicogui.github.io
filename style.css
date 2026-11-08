@@ -867,7 +867,7 @@ section:not(#hero):not(#contato) h3 span,
 }
 
 
-/* Sistema único de espaçamento para títulos e subtítulos de seção. */
+/* Cabeçalhos de seção compartilham a hierarquia e o ritmo da Metodologia. */
 :root{
   --section-title-subtitle-gap:1rem;
   --section-heading-content-gap:clamp(2rem,4vw,2.75rem);
@@ -878,24 +878,16 @@ section:not(#hero):not(#contato) h3 span,
   gap:var(--section-title-subtitle-gap);
   margin:0 0 var(--section-heading-content-gap);
 }
-.section-heading-centered{text-align:center;align-items:center}
 .section-heading h2,
 #metodologia .methodology-heading h2,
-.about-heading h2{
-  margin:0!important;
-}
+.about-heading h2{margin:0!important}
 .section-heading>p,
-#metodologia .methodology-heading>p:last-child{
-  margin:0 auto;
-  line-height:1.7;
-}
-#areas .section-heading{max-width:760px;margin-inline:auto}
-#areas .areas-subtitle{max-width:680px;color:var(--text-muted,#62676d)}
+#metodologia .methodology-heading>p:last-child{margin:0 auto;line-height:1.7}
+#areas .areas-heading{max-width:680px;margin:0 auto var(--section-heading-content-gap);text-align:center}
+#areas .areas-heading>p:last-child{max-width:58ch;color:var(--brand-muted,#59636d)}
 #metodologia .methodology-heading{
-  display:flex;
-  flex-direction:column;
-  gap:var(--section-title-subtitle-gap);
-  margin-bottom:var(--section-heading-content-gap);
+  display:flex;flex-direction:column;gap:var(--section-title-subtitle-gap);
+  margin-bottom:var(--section-heading-content-gap)
 }
 #metodologia .methodology-eyebrow{margin:0 0 calc(var(--section-title-subtitle-gap) * -0.5)}
 #metodologia .methodology-heading>p:last-child{max-width:58ch}
@@ -904,9 +896,8 @@ section:not(#hero):not(#contato) h3 span,
 #contato .section-heading{max-width:720px;margin:0 auto var(--section-heading-content-gap)}
 #contato .contact-subtitle{max-width:42ch;color:rgba(255,255,255,.84);font-size:clamp(1rem,2.2vw,1.2rem);font-weight:450}
 @media(max-width:575.98px){
-  .section-heading-centered{text-align:left;align-items:flex-start}
-  #areas .section-heading{align-items:center;text-align:center}
-  #areas .areas-subtitle{padding-inline:.5rem}
+  #areas .areas-heading{text-align:left;align-items:flex-start}
+  #areas .areas-heading>p:last-child{margin-left:0}
   #metodologia .methodology-heading{text-align:left}
   #metodologia .methodology-heading>p:last-child{margin-left:0}
   #contato .section-heading{text-align:center;align-items:center}
