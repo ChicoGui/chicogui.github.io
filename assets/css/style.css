@@ -1074,3 +1074,10 @@ section.hero-image{
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
 }
+
+
+/* Centraliza o título principal da seção Sobre sem alterar o alinhamento do kicker. */
+#sobre .about-heading h2{
+  margin-inline:auto;
+  text-align:center;
+}
