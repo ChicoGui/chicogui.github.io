@@ -1016,3 +1016,60 @@ section:not(#hero):not(#hero-services-strip):not(#hero2):not(#hero3) > .containe
 @media(prefers-reduced-motion:reduce){
   .hero-service-link,.hero-service-link .service-link-arrow{transition:none}
 }
+
+
+/* ==========================================================
+   Ajustes finais de espaçamento e navegação por âncoras
+   ========================================================== */
+:root{
+  --site-nav-height:4.25rem;
+  --section-space-y:clamp(3.5rem,6.5vw,5.5rem);
+}
+
+/* O offset acompanha a altura real da navbar em todos os breakpoints. */
+html{
+  scroll-padding-top:calc(var(--site-nav-height) + 1rem);
+}
+
+/* Ritmo vertical uniforme; Hero e faixas visuais mantêm tratamento próprio. */
+section:not(#hero):not(#hero-services-strip):not(.hero-image){
+  padding-block:var(--section-space-y);
+}
+
+/* As imagens de transição usam somente sua altura visual, sem padding duplicado. */
+section.hero-image{
+  padding:0;
+  min-height:clamp(15rem,34vw,32rem);
+}
+
+/* Subtítulo de Atuação volta ao fluxo normal, sem margem negativa. */
+#areas .areas-subtitle{
+  margin-top:0!important;
+}
+
+/* A seção de contato mantém respiro proporcional, sem excesso em telas estreitas. */
+#contato{
+  padding-block:clamp(3.5rem,7vw,6rem);
+}
+
+@media(max-width:575.98px){
+  :root{--section-space-y:3.5rem}
+  #hero{padding-block:7rem 4rem}
+  section.hero-image{min-height:14rem}
+  #contato{padding-block:3.5rem}
+}
+
+@media(min-width:576px) and (max-width:991.98px){
+  :root{--section-space-y:clamp(3.75rem,6vw,5rem)}
+}
+
+@media(max-height:500px) and (orientation:landscape){
+  #hero{
+    min-height:30rem;
+    padding-block:6rem 3rem;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+}
