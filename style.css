@@ -902,3 +902,49 @@ section:not(#hero):not(#contato) h3 span,
   #metodologia .methodology-heading>p:last-child{margin-left:0}
   #contato .section-heading{text-align:center;align-items:center}
 }
+
+
+/* Alinhamento central consistente dos títulos de todas as seções. */
+section:not(#hero):not(#hero-services-strip):not(#hero2):not(#hero3) > .container > header{
+  text-align:center;
+  align-items:center;
+}
+section:not(#hero):not(#hero-services-strip):not(#hero2):not(#hero3) > .container > header :is(h2,h3,p){
+  text-align:center;
+  margin-inline:auto;
+}
+section:not(#hero):not(#hero-services-strip):not(#hero2):not(#hero3) > .container > h2{
+  width:100%;
+  text-align:center!important;
+  margin-inline:auto;
+}
+#areas .areas-heading,
+#metodologia .methodology-heading,
+#sobre .about-heading,
+#contato .section-heading{
+  text-align:center;
+  align-items:center;
+}
+#areas .areas-heading>p,
+#metodologia .methodology-heading>p:last-child,
+#sobre .about-heading>p,
+#contato .section-heading>p{
+  margin-inline:auto!important;
+  text-align:center;
+}
+@media(max-width:575.98px){
+  #areas .areas-heading,
+  #metodologia .methodology-heading,
+  #sobre .about-heading,
+  #contato .section-heading{
+    text-align:center;
+    align-items:center;
+  }
+  #areas .areas-heading>p,
+  #metodologia .methodology-heading>p:last-child,
+  #sobre .about-heading>p,
+  #contato .section-heading>p{
+    margin-inline:auto!important;
+    text-align:center;
+  }
+}
