@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17191d">
+  <meta name="color-scheme" content="light">
+
+  <title>Francisco Guilherme | UX/UI Designer & Desenvolvedor Web</title>
+
+  <meta name="robots" content="noindex,follow">
+  <meta name="description"
+    content="Designer de Produtos e Desenvolvedor Web com foco em UX, acessibilidade, performance e soluções digitais eficientes.">
+  <meta name="keywords"
+    content="UX Design, UI Design, Product Designer, Desenvolvimento Web, Front-end, Acessibilidade, Portfólio">
+  <meta name="author" content="Francisco Guilherme Siqueira Viana">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
+  <link rel="preload" as="image" href="assets/img/chicoOffice-q88.webp?v=20261108-2" fetchpriority="high">
+  <link href="assets/css/style.css?v=20261108-2" rel="stylesheet">
+
+</head>
+
+<body>
+<a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg fixed-top bg-light border-bottom" aria-label="Navegação principal">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="#hero">ChicoGui</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+      aria-controls="mainNav" aria-expanded="false" aria-label="Alternar navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#hero">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#areas">Atuação</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#metodologia">Metodologia</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main id="conteudo-principal">
+
+<!-- ================= HERO ================= -->
+<section id="hero" class="text-white" aria-labelledby="hero-title">
+  <div class="container reveal">
+    <div class="hero-copy">
+      <p class="hero-eyebrow">PRODUCT DESIGN <span aria-hidden="true">·</span> UX/UI <span aria-hidden="true">·</span> DESENVOLVIMENTO WEB</p>
+      <h1 id="hero-title" class="fw-bold mb-3">Design, tecnologia e experiência <span>humana.</span></h1>
+      <p class="hero-description">Transformo ideias em soluções digitais funcionais, acessíveis e intuitivas — unindo estratégia, UX/UI e desenvolvimento web.</p>
+      <div class="hero-actions">
+        <a href="#contato" class="btn btn-site btn-site-primary btn-site-lg">Vamos conversar?</a>
+        <a href="#sobre" class="btn btn-site btn-site-ghost btn-site-lg">Conheça minha trajetória</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAIXA DE SERVIÇOS DO HERO ================= -->
+<section id="hero-services-strip" aria-label="Principais áreas de atuação">
+  <div class="container">
+    <ul class="hero-services-list">
+      <li class="hero-service-item">
+        <button type="button" class="hero-service-link" data-bs-toggle="modal" data-bs-target="#caseInstitucional" aria-haspopup="dialog">
+          <i class="bi bi-globe" aria-hidden="true"></i>
+          <span>Sites Institucionais</span>
+          <i class="bi bi-arrow-up-right service-link-arrow" aria-hidden="true"></i>
+        </button>
+      </li>
+      <li class="hero-service-item">
+        <button type="button" class="hero-service-link" data-bs-toggle="modal" data-bs-target="#caseEcommerce" aria-haspopup="dialog">
+          <i class="bi bi-cart-check" aria-hidden="true"></i>
+          <span>E-commerces</span>
+          <i class="bi bi-arrow-up-right service-link-arrow" aria-hidden="true"></i>
+        </button>
+      </li>
+      <li class="hero-service-item">
+        <button type="button" class="hero-service-link" data-bs-toggle="modal" data-bs-target="#caseEducacional" aria-haspopup="dialog">
+          <i class="bi bi-mortarboard" aria-hidden="true"></i>
+          <span>Plataformas Educacionais</span>
+          <i class="bi bi-arrow-up-right service-link-arrow" aria-hidden="true"></i>
+        </button>
+      </li>
+      <li class="hero-service-item">
+        <button type="button" class="hero-service-link" data-bs-toggle="modal" data-bs-target="#caseSistemas" aria-haspopup="dialog">
+          <i class="bi bi-calendar-check" aria-hidden="true"></i>
+          <span>Sistemas Sob Medida</span>
+          <i class="bi bi-arrow-up-right service-link-arrow" aria-hidden="true"></i>
+        </button>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= ÁREAS DE ATUAÇÃO ================= -->
+<section id="areas" class="reveal" aria-labelledby="areas-title">
+  <div class="container">
+    <header class="methodology-heading areas-heading">
+      <h2 id="areas-title" class="areas-title">Estratégia <span class="title-plus">+</span> Design <span class="title-plus">+</span> Tecnologia</h2>
+      <p class="areas-subtitle">Do planejamento à implementação, construo experiências digitais que unem funcionalidade, estética e propósito.</p>
+    </header>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="cardsAreas"></div>
+  </div>
+</section>
+
+<section class="hero-image" style="background-image:url('assets/img/chicoDesk.png')" hidden></section>
+
+<!-- ================= SERVIÇOS ================= -->
+<section id="servicos" class="bg-light reveal" hidden>
+  <div class="container">
+    <h2 class="text-center mb-5">Serviços</h2>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="cardsServicos"></div>
+  </div>
+</section>
+<div id="modaisServicos"></div>
+
+<!-- ================= PROJETOS — VERSÃO DE TESTE ================= -->
+<section id="projetos" class="projects-section bg-light reveal" aria-labelledby="projetos-title">
+  <div class="container">
+    <header class="projects-heading">
+      <p class="projects-eyebrow">PORTFÓLIO / TRABALHOS SELECIONADOS</p>
+      <h2 id="projetos-title">Projetos que conectam <span>design</span> e <span>tecnologia</span>.</h2>
+      <p>Uma seleção de experiências digitais, interfaces e soluções construídas ao longo da minha trajetória profissional.</p>
+    </header>
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 projects-grid">
+      
+      <div class="col">
+        <article class="project-card h-100">
+          <div class="project-thumb-wrap">
+            <img class="project-thumb" src="assets/img/siteInstitucional.png" alt="Thumbnail demonstrativa de site institucional" loading="lazy" decoding="async" width="720" height="450">
+            <span class="project-number">01</span>
+          </div>
+          <div class="project-card-body">
+            <p class="project-type">Site institucional</p>
+            <h3>Experiências Web</h3>
+            <p class="project-description">Estrutura digital para apresentar uma marca com clareza, consistência visual e navegação responsiva.</p>
+            <div class="project-tags"><span>UX/UI</span><span>Design responsivo</span><span>Front-end</span></div>
+            <button class="btn btn-site btn-site-secondary project-open" type="button" data-bs-toggle="modal" data-bs-target="#case-projeto-web" aria-haspopup="dialog">Conhecer projeto <i class="bi bi-arrow-up-right" aria-hidden="true"></i></button>
+          </div>
+        </article>
+      </div>
+      <div class="col">
+        <article class="project-card h-100">
+          <div class="project-thumb-wrap">
+            <img class="project-thumb" src="assets/img/ecommerce.png" alt="Thumbnail demonstrativa de e-commerce" loading="lazy" decoding="async" width="720" height="450">
+            <span class="project-number">02</span>
+          </div>
+          <div class="project-card-body">
+            <p class="project-type">E-commerce</p>
+            <h3>Produtos Digitais</h3>
+            <p class="project-description">Experiência de compra organizada, com foco na descoberta de produtos e na clareza do fluxo.</p>
+            <div class="project-tags"><span>UX</span><span>UI</span><span>E-commerce</span></div>
+            <button class="btn btn-site btn-site-secondary project-open" type="button" data-bs-toggle="modal" data-bs-target="#case-projeto-commerce" aria-haspopup="dialog">Conhecer projeto <i class="bi bi-arrow-up-right" aria-hidden="true"></i></button>
+          </div>
+        </article>
+      </div>
+      <div class="col">
+        <article class="project-card h-100">
+          <div class="project-thumb-wrap">
+            <img class="project-thumb" src="assets/img/ava.png" alt="Thumbnail demonstrativa de plataforma educacional" loading="lazy" decoding="async" width="720" height="450">
+            <span class="project-number">03</span>
+          </div>
+          <div class="project-card-body">
+            <p class="project-type">Plataforma educacional</p>
+            <h3>Educação Digital</h3>
+            <p class="project-description">Ambientes digitais que organizam conteúdos e apoiam jornadas de aprendizagem acessíveis.</p>
+            <div class="project-tags"><span>UX/UI</span><span>Acessibilidade</span><span>Educação</span></div>
+            <button class="btn btn-site btn-site-secondary project-open" type="button" data-bs-toggle="modal" data-bs-target="#case-projeto-educacao" aria-haspopup="dialog">Conhecer projeto <i class="bi bi-arrow-up-right" aria-hidden="true"></i></button>
+          </div>
+        </article>
+      </div>
+      <div class="col">
+        <article class="project-card h-100">
+          <div class="project-thumb-wrap">
+            <img class="project-thumb" src="assets/img/dashboard.png" alt="Thumbnail demonstrativa de dashboard" loading="lazy" decoding="async" width="720" height="450">
+            <span class="project-number">04</span>
+          </div>
+          <div class="project-card-body">
+            <p class="project-type">Dashboard / sistema web</p>
+            <h3>Sistemas e Plataformas</h3>
+            <p class="project-description">Interfaces funcionais para organizar informações, apoiar processos e simplificar tarefas.</p>
+            <div class="project-tags"><span>Product Design</span><span>Design System</span><span>Web</span></div>
+            <button class="btn btn-site btn-site-secondary project-open" type="button" data-bs-toggle="modal" data-bs-target="#case-projeto-sistema" aria-haspopup="dialog">Conhecer projeto <i class="bi bi-arrow-up-right" aria-hidden="true"></i></button>
+          </div>
+        </article>
+      </div>
+    </div>
+    <p class="projects-footnote">Versão de avaliação visual · Conteúdo e imagens demonstrativos, sujeitos à substituição pelos projetos reais.</p>
+  </div>
+</section>
+
+  <div class="modal fade project-modal" id="case-projeto-web" tabindex="-1" aria-labelledby="case-projeto-web-title" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div><p class="project-type mb-1">Site institucional · ESTUDO DE CASO</p><h2 class="modal-title" id="case-projeto-web-title">Experiências Web</h2></div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar detalhes do projeto"></button>
+        </div>
+        <div class="modal-body">
+          <img class="project-modal-image" src="assets/img/siteInstitucional.png" alt="Thumbnail demonstrativa de site institucional" width="1200" height="750">
+          <p class="project-modal-intro">Projeto demonstrativo de experiência web institucional. Este conteúdo valida a hierarquia visual e a estrutura do estudo de caso; será substituído pelas informações e evidências do projeto real.</p>
+          <div class="row g-4 project-case-grid">
+            <div class="col-12 col-md-6"><h3>O desafio</h3><p>Organizar conteúdo e prioridades para que diferentes públicos encontrem rapidamente as informações mais importantes.</p></div>
+            <div class="col-12 col-md-6"><h3>Minha atuação</h3><p>UX/UI, arquitetura da informação e desenvolvimento front-end — campos ilustrativos para validação do modelo.</p></div>
+            <div class="col-12 col-md-6"><h3>A solução</h3><p>Interface responsiva, navegação objetiva, hierarquia de conteúdo e atenção a acessibilidade e desempenho.</p></div>
+            <div class="col-12 col-md-6"><h3>Tecnologias e práticas</h3><p>HTML · CSS · JavaScript · Bootstrap</p></div>
+            <div class="col-12"><div class="project-result"><h3>Resultados e aprendizados</h3><p>Resultados e indicadores serão adicionados somente após a seleção e validação do case real.</p></div></div>
+          </div>
+          <p class="project-demo-note"><i class="bi bi-info-circle" aria-hidden="true"></i> Conteúdo demonstrativo: textos, papéis e resultados deverão ser revisados e substituídos pelos dados reais antes da publicação definitiva.</p>
+        </div>
+        <div class="modal-footer"><a href="#contato" class="btn btn-site btn-site-primary project-contact" data-bs-dismiss="modal">Vamos conversar sobre um projeto?</a><button type="button" class="btn btn-site btn-site-secondary" data-bs-dismiss="modal">Fechar</button></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade project-modal" id="case-projeto-commerce" tabindex="-1" aria-labelledby="case-projeto-commerce-title" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div><p class="project-type mb-1">E-commerce · ESTUDO DE CASO</p><h2 class="modal-title" id="case-projeto-commerce-title">Produtos Digitais</h2></div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar detalhes do projeto"></button>
+        </div>
+        <div class="modal-body">
+          <img class="project-modal-image" src="assets/img/ecommerce.png" alt="Thumbnail demonstrativa de e-commerce" width="1200" height="750">
+          <p class="project-modal-intro">Projeto demonstrativo de comércio eletrônico, utilizado aqui para apresentar como imagens, contexto e informações técnicas serão organizados.</p>
+          <div class="row g-4 project-case-grid">
+            <div class="col-12 col-md-6"><h3>O desafio</h3><p>Reduzir fricções na descoberta de produtos e tornar o percurso de compra mais compreensível.</p></div>
+            <div class="col-12 col-md-6"><h3>Minha atuação</h3><p>Atuação e responsabilidades específicas serão descritas conforme o projeto real escolhido.</p></div>
+            <div class="col-12 col-md-6"><h3>A solução</h3><p>Organização de catálogo, hierarquia de informações e interface adaptada a diferentes telas.</p></div>
+            <div class="col-12 col-md-6"><h3>Tecnologias e práticas</h3><p>UX/UI · Front-end · Integrações</p></div>
+            <div class="col-12"><div class="project-result"><h3>Resultados e aprendizados</h3><p>Resultados verificáveis serão apresentados após a inclusão do case real.</p></div></div>
+          </div>
+          <p class="project-demo-note"><i class="bi bi-info-circle" aria-hidden="true"></i> Conteúdo demonstrativo: textos, papéis e resultados deverão ser revisados e substituídos pelos dados reais antes da publicação definitiva.</p>
+        </div>
+        <div class="modal-footer"><a href="#contato" class="btn btn-site btn-site-primary project-contact" data-bs-dismiss="modal">Vamos conversar sobre um projeto?</a><button type="button" class="btn btn-site btn-site-secondary" data-bs-dismiss="modal">Fechar</button></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade project-modal" id="case-projeto-educacao" tabindex="-1" aria-labelledby="case-projeto-educacao-title" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div><p class="project-type mb-1">Plataforma educacional · ESTUDO DE CASO</p><h2 class="modal-title" id="case-projeto-educacao-title">Educação Digital</h2></div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar detalhes do projeto"></button>
+        </div>
+        <div class="modal-body">
+          <img class="project-modal-image" src="assets/img/ava.png" alt="Thumbnail demonstrativa de plataforma educacional" width="1200" height="750">
+          <p class="project-modal-intro">Projeto demonstrativo de plataforma educacional. A modal apresenta a estrutura prevista para contextualizar o produto e sua experiência.</p>
+          <div class="row g-4 project-case-grid">
+            <div class="col-12 col-md-6"><h3>O desafio</h3><p>Facilitar o acesso a conteúdos, atividades e informações para diferentes perfis de usuários.</p></div>
+            <div class="col-12 col-md-6"><h3>Minha atuação</h3><p>Pesquisa, arquitetura da informação, UX/UI e implementação serão detalhadas de acordo com sua participação real.</p></div>
+            <div class="col-12 col-md-6"><h3>A solução</h3><p>Fluxos claros, componentes consistentes e atenção à acessibilidade e responsividade.</p></div>
+            <div class="col-12 col-md-6"><h3>Tecnologias e práticas</h3><p>UX · UI · Acessibilidade · CMS</p></div>
+            <div class="col-12"><div class="project-result"><h3>Resultados e aprendizados</h3><p>Métricas, aprendizados e resultados serão incluídos quando houver dados confirmados.</p></div></div>
+          </div>
+          <p class="project-demo-note"><i class="bi bi-info-circle" aria-hidden="true"></i> Conteúdo demonstrativo: textos, papéis e resultados deverão ser revisados e substituídos pelos dados reais antes da publicação definitiva.</p>
+        </div>
+        <div class="modal-footer"><a href="#contato" class="btn btn-site btn-site-primary project-contact" data-bs-dismiss="modal">Vamos conversar sobre um projeto?</a><button type="button" class="btn btn-site btn-site-secondary" data-bs-dismiss="modal">Fechar</button></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade project-modal" id="case-projeto-sistema" tabindex="-1" aria-labelledby="case-projeto-sistema-title" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div><p class="project-type mb-1">Dashboard / sistema web · ESTUDO DE CASO</p><h2 class="modal-title" id="case-projeto-sistema-title">Sistemas e Plataformas</h2></div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar detalhes do projeto"></button>
+        </div>
+        <div class="modal-body">
+          <img class="project-modal-image" src="assets/img/dashboard.png" alt="Thumbnail demonstrativa de dashboard" width="1200" height="750">
+          <p class="project-modal-intro">Projeto demonstrativo de sistema web, pensado para validar a apresentação de dashboards, fluxos e decisões de interface.</p>
+          <div class="row g-4 project-case-grid">
+            <div class="col-12 col-md-6"><h3>O desafio</h3><p>Transformar processos e dados em tarefas e informações fáceis de compreender e operar.</p></div>
+            <div class="col-12 col-md-6"><h3>Minha atuação</h3><p>A contribuição individual e o trabalho em equipe serão discriminados no case definitivo.</p></div>
+            <div class="col-12 col-md-6"><h3>A solução</h3><p>Painéis organizados, hierarquia visual, componentes reutilizáveis e fluxos objetivos.</p></div>
+            <div class="col-12 col-md-6"><h3>Tecnologias e práticas</h3><p>UX/UI · Design System · JavaScript</p></div>
+            <div class="col-12"><div class="project-result"><h3>Resultados e aprendizados</h3><p>Não há indicadores atribuídos nesta versão demonstrativa.</p></div></div>
+          </div>
+          <p class="project-demo-note"><i class="bi bi-info-circle" aria-hidden="true"></i> Conteúdo demonstrativo: textos, papéis e resultados deverão ser revisados e substituídos pelos dados reais antes da publicação definitiva.</p>
+        </div>
+        <div class="modal-footer"><a href="#contato" class="btn btn-site btn-site-primary project-contact" data-bs-dismiss="modal">Vamos conversar sobre um projeto?</a><button type="button" class="btn btn-site btn-site-secondary" data-bs-dismiss="modal">Fechar</button></div>
+      </div>
+    </div>
+  </div>
+<style>
+/* ===== Projetos: layout de avaliação, isolado nesta cópia ===== */
+.projects-section{background:#f5f6f7!important}
+.projects-heading{display:flex;flex-direction:column;align-items:center;gap:1rem;max-width:760px;margin:0 auto clamp(2rem,4vw,2.75rem);text-align:center}
+.projects-eyebrow{margin:0;color:#176b91;font-size:.75rem;font-weight:800;letter-spacing:.14em}
+.projects-heading h2{max-width:24ch;margin:0!important;color:#17191d!important;font-size:clamp(2rem,4.8vw,3.25rem);font-weight:800;letter-spacing:-.045em;line-height:1.08}
+.projects-heading h2 span{color:#176b91!important}
+.projects-heading>p:last-child{max-width:58ch;margin:0;color:#59636d;line-height:1.7}
+.project-card{display:flex;flex-direction:column;overflow:hidden;background:#fff;border:1px solid #e4e7ea;border-radius:1rem;box-shadow:0 8px 26px rgba(23,25,29,.055);transition:transform .2s ease,box-shadow .2s ease}
+.project-thumb-wrap{position:relative;overflow:hidden;aspect-ratio:16/10;background:#e8ebee}
+.project-thumb{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.project-number{position:absolute;top:.85rem;left:.85rem;display:grid;place-items:center;width:2.35rem;height:2.35rem;border:1px solid rgba(255,255,255,.65);border-radius:50%;background:rgba(23,25,29,.78);color:#fff;font-size:.75rem;font-weight:750;backdrop-filter:blur(8px)}
+.project-card-body{display:flex;flex:1;flex-direction:column;align-items:flex-start;padding:1.35rem}
+.project-type{margin:0 0 .55rem;color:#176b91;font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.project-card h3{margin:0 0 .65rem;color:#176b91!important;font-size:1.25rem;font-weight:800;letter-spacing:-.025em}
+.project-description{margin:0 0 1rem;color:#59636d;font-size:.94rem;line-height:1.65}
+.project-tags{display:flex;flex-wrap:wrap;gap:.45rem;margin:0 0 1.25rem}
+.project-tags span{padding:.35rem .6rem;border-radius:99px;background:#edf5f8;color:#24566d;font-size:.72rem;font-weight:650}
+.project-open{display:flex;align-items:center;justify-content:center;gap:.5rem;width:100%;min-height:2.85rem;margin-top:auto}
+.projects-footnote{margin:1.5rem 0 0;color:#737d86;font-size:.78rem;text-align:center}
+.project-modal .modal-content{overflow:hidden;border:0;border-radius:1rem}
+.project-modal .modal-header{align-items:flex-start;padding:1.25rem 1.5rem;border-bottom:1px solid #e8ebee}
+.project-modal .modal-title{color:#17191d!important;font-size:clamp(1.45rem,3vw,2rem);font-weight:800;letter-spacing:-.035em}
+.project-modal .modal-body{padding:clamp(1rem,3vw,2rem)}
+.project-modal-image{display:block;width:100%;max-height:420px;aspect-ratio:16/8;object-fit:cover;border-radius:.75rem;background:#edf0f2}
+.project-modal-intro{max-width:72ch;margin:1.5rem 0 2rem;color:#343b42;font-size:1.05rem;line-height:1.75}
+.project-case-grid h3{margin:0 0 .5rem;color:#176b91!important;font-size:1rem;font-weight:800}
+.project-case-grid p{margin:0;color:#59636d;line-height:1.7}
+.project-result{padding:1.25rem;border-left:3px solid #176b91;border-radius:.25rem;background:#f3f6f7}
+.project-demo-note{display:flex;gap:.6rem;align-items:flex-start;margin:1.75rem 0 0;padding-top:1rem;border-top:1px solid #e5e8eb;color:#737d86;font-size:.82rem;line-height:1.55}
+.project-demo-note i{color:#176b91}
+.project-modal .modal-footer{gap:.6rem;padding:1rem 1.5rem;border-top:1px solid #e8ebee}
+@media(hover:hover) and (pointer:fine){.project-card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(23,25,29,.11)}.project-card:hover .project-thumb{transform:scale(1.035)}}
+@media(max-width:575.98px){.projects-heading{align-items:center;text-align:center}.project-card-body{padding:1.15rem}.project-modal .modal-dialog{margin:.5rem}.project-modal .modal-header,.project-modal .modal-footer{padding:1rem}.project-modal .modal-footer>*{width:100%}.project-modal-image{aspect-ratio:4/3}.project-modal-intro{font-size:.98rem}}
+@media(prefers-reduced-motion:reduce){.project-card,.project-thumb{transition:none}.project-card:hover{transform:none}}
+</style>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('.project-contact').forEach(function(link){
+    link.addEventListener('click',function(){
+      window.setTimeout(function(){
+        var target=document.getElementById('contato');
+        if(target) target.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+      },180);
+    });
+  });
+});
+</script>
+
+
+<section id="hero2" role="img" aria-label="Ambiente de trabalho e criação digital" class="hero-image d-flex align-items-center justify-content-center text-center text-white" style="background-image: url('assets/img/chicoDesk.png');">
+</section>
+
+<!-- ================= METODOLOGIA ================= -->
+
+  <section id="metodologia" class="methodology-section reveal" aria-labelledby="metodologia-title">
+  <div class="container">
+    <header class="methodology-heading">
+      <p class="methodology-eyebrow">COMO EU TRABALHO</p>
+      <h2 id="metodologia-title">Da ideia à evolução.</h2>
+      <p>Um processo integrado que transforma necessidades reais em experiências digitais funcionais, acessíveis e relevantes.</p>
+    </header>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3 methodology-grid">
+      <article class="col"><div class="card method-step h-100">
+        <div class="method-step-top"><span class="method-step-icon"><i class="bi bi-search" aria-hidden="true"></i></span><span class="method-step-number">01.</span><h3>Pesquisa</h3></div>
+        <p>Investigo pessoas, negócio e contexto por meio de entrevistas, análise e levantamento de requisitos. Decisões melhores começam com perguntas certas.</p>
+      </div></article>
+      <article class="col"><div class="card method-step h-100">
+        <div class="method-step-top"><span class="method-step-icon"><i class="bi bi-compass" aria-hidden="true"></i></span><span class="method-step-number">02.</span><h3>Estratégia</h3></div>
+        <p>Organizo objetivos, prioridades e arquitetura da informação para definir uma direção clara e alinhar as necessidades dos usuários aos objetivos do projeto.</p>
+      </div></article>
+      <article class="col"><div class="card method-step h-100">
+        <div class="method-step-top"><span class="method-step-icon"><i class="bi bi-vector-pen" aria-hidden="true"></i></span><span class="method-step-number">03.</span><h3>Design</h3></div>
+        <p>Desenho jornadas, fluxos, wireframes e interfaces. Prototipo experiências intuitivas, consistentes e acessíveis antes de avançar para a implementação.</p>
+      </div></article>
+      <article class="col"><div class="card method-step h-100">
+        <div class="method-step-top"><span class="method-step-icon"><i class="bi bi-code-slash" aria-hidden="true"></i></span><span class="method-step-number">04.</span><h3>Desenvolvimento</h3></div>
+        <p>Transformo o projeto em produto digital com código responsivo, integrações e atenção à acessibilidade, performance, segurança e manutenção.</p>
+      </div></article>
+      <article class="col"><div class="card method-step h-100">
+        <div class="method-step-top"><span class="method-step-icon"><i class="bi bi-check2-circle" aria-hidden="true"></i></span><span class="method-step-number">05.</span><h3>Validação</h3></div>
+        <p>Testo fluxos e funcionalidades, identifico pontos de fricção e ajusto a solução com base em feedback, critérios de qualidade e dados de uso.</p>
+      </div></article>
+      <article class="col"><div class="card method-step h-100">
+        <div class="method-step-top"><span class="method-step-icon"><i class="bi bi-arrow-repeat" aria-hidden="true"></i></span><span class="method-step-number">06.</span><h3>Evolução</h3></div>
+        <p>Publico e acompanho o projeto. Métricas, feedbacks e necessidades que surgem no uso orientam melhorias contínuas e novas oportunidades.</p>
+      </div></article>
+    </div>
+  </div>
+</section>
+
+<section id="hero3" role="img" aria-label="Ambiente de trabalho e criação digital" class="hero-image d-flex align-items-center justify-content-center text-center text-white" style="background-image: url('assets/img/chicoDesk.png');">
+</section>
+
+<!-- ================= SOBRE ================= -->
+<section id="sobre" class="about-section bg-light reveal" aria-labelledby="sobre-title">
+  <div class="container">
+    <header class="about-heading">
+      <p class="about-kicker">SOBRE MIM</p>
+      <h2 id="sobre-title">Uma trajetória entre <span class="title-blue-word">design</span> e <span class="title-blue-word">tecnologia</span>.</h2>
+    </header>
+
+    <div class="about-intro">
+      <article id="bio" class="about-bio">
+        <p class="about-lead">Acredito em experiências digitais que fazem sentido para quem usa — e funcionam bem para quem precisa delas.</p>
+        <p>Desde 2009, atuo na interseção entre design e desenvolvimento web. Ao longo desse percurso, colaborei com agências, empresas e instituições dos setores público e privado, conectando visão de produto, experiência do usuário e implementação.</p>
+        <p>Meu trabalho combina arquitetura da informação, UX/UI e desenvolvimento front-end para transformar necessidades complexas em soluções claras, acessíveis, responsivas e eficientes.</p>
+      </article>
+
+      <aside class="about-highlight" aria-label="Resumo profissional">
+        <span class="about-highlight-index" aria-hidden="true">01 / PERFIL</span>
+        <strong class="about-highlight-number">15<span>+</span></strong>
+        <span class="about-highlight-caption">anos de experiência</span>
+        <span class="about-highlight-divider" aria-hidden="true"></span>
+        <p>Do entendimento do problema à construção da experiência digital.</p>
+        <div class="about-highlight-tags">
+          <span>Estratégia</span><span>UX/UI</span><span>Front-end</span>
+        </div>
+      </aside>
+    </div>
+
+  <div id="tabs" class="profile-details mt-5">
+    <div class="profile-tabs-card">
+
+  <!-- NAV PILLS -->
+  <ul class="nav nav-pills profile-tabs-nav" id="profileTabs" role="tablist" aria-label="Informações profissionais">
+
+    <li class="nav-item" role="presentation">
+      <button 
+        class="nav-link active" 
+        id="habilidades-tab"
+        data-bs-toggle="pill" 
+        data-bs-target="#habilidades" 
+        type="button" 
+        role="tab"
+        aria-controls="habilidades"
+        aria-selected="true">
+        Habilidades
+      </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+      <button 
+        class="nav-link" 
+        id="formacao-tab"
+        data-bs-toggle="pill" 
+        data-bs-target="#formacao" 
+        type="button" 
+        role="tab"
+        aria-controls="formacao"
+        aria-selected="false">
+        Formação
+      </button>
+    </li>
+
+    <li class="nav-item" role="presentation">
+      <button 
+        class="nav-link" 
+        id="experiencia-tab"
+        data-bs-toggle="pill" 
+        data-bs-target="#experiencia" 
+        type="button" 
+        role="tab"
+        aria-controls="experiencia"
+        aria-selected="false">
+        Experiência
+      </button>
+    </li>
+
+  </ul>
+
+      <!-- Conteúdo das abas -->
+      <div class="tab-content profile-tab-content mt-4">
+  <!-- HABILIDADES --> 
+  <div class="tab-pane fade show active" id="habilidades" role="tabpanel" aria-labelledby="habilidades-tab" tabindex="0"> 
+    <!-- Design e Prototipação --> 
+    <article class="mb-3"> 
+      <h3 class="h6">Design e Prototipação</h3> 
+      <ul class="list-unstyled d-flex flex-wrap gap-2"> 
+        <li class="badge rounded-pill bg-info text-dark">Figma</li> 
+        <li class="badge rounded-pill bg-info text-dark">Adobe XD</li> 
+        <li class="badge rounded-pill bg-info text-dark">Wireframing</li> 
+        <li class="badge rounded-pill bg-info text-dark">Prototipagem Interativa</li> 
+        <li class="badge rounded-pill bg-info text-dark">Design Responsivo</li> 
+        <li class="badge rounded-pill bg-info text-dark">Testes de Usabilidade</li> 
+        <li class="badge rounded-pill bg-info text-dark">Design System</li> 
+        <li class="badge rounded-pill bg-info text-dark">Acessibilidade (WCAG 2.1)</li> 
+      </ul> </article> 
+    <!-- Desenvolvimento Web --> 
+    <article class="mb-3"> 
+      <h3 class="h6">Desenvolvimento Web</h3> 
+      <ul class="list-unstyled d-flex flex-wrap gap-2"> 
+        <!-- Front-end --> <li class="badge rounded-pill bg-info text-dark">HTML5 Semântico</li> 
+        <li class="badge rounded-pill bg-info text-dark">CSS3 + Flexbox/Grid</li> 
+        <li class="badge rounded-pill bg-info text-dark">SASS/SCSS</li> 
+        <li class="badge rounded-pill bg-info text-dark">JavaScript ES6+</li> 
+        <li class="badge rounded-pill bg-info text-dark">TypeScript</li> 
+        <li class="badge rounded-pill bg-info text-dark">React.js</li> 
+        <li class="badge rounded-pill bg-info text-dark">Vue.js</li> 
+        <li class="badge rounded-pill bg-info text-dark">Angular</li> 
+        <!-- Back-end --> 
+        <li class="badge rounded-pill bg-info text-dark">Node.js</li>
+        <li class="badge rounded-pill bg-info text-dark">PHP</li> 
+        <li class="badge rounded-pill bg-info text-dark">SQL / MySQL</li> 
+        <li class="badge rounded-pill bg-info text-dark">NoSQL / MongoDB</li> 
+        <li class="badge rounded-pill bg-info text-dark">APIs REST</li> 
+        <li class="badge rounded-pill bg-info text-dark">Autenticação JWT/OAuth</li> 
+      </ul> 
+    </article> 
+    <!-- CMS e Ferramentas --> 
+    <article class="mb-3"> 
+      <h3 class="h6">CMS e Ferramentas</h3> 
+      <ul class="list-unstyled d-flex flex-wrap gap-2"> 
+        <li class="badge rounded-pill bg-info text-dark">WordPress</li> 
+        <li class="badge rounded-pill bg-info text-dark">Drupal</li> 
+        <li class="badge rounded-pill bg-info text-dark">Joomla</li> 
+        <li class="badge rounded-pill bg-info text-dark">WooCommerce</li> 
+        <li class="badge rounded-pill bg-info text-dark">Moodle</li> 
+        <li class="badge rounded-pill bg-info text-dark">Git / GitHub / GitLab</li> 
+        <li class="badge rounded-pill bg-info text-dark">npm / Webpack / Vite</li> 
+        <li class="badge rounded-pill bg-info text-dark">CI/CD básico</li> 
+      </ul> 
+    </article> 
+    <!-- Otimização e Métricas --> 
+    <article class="mb-3"> 
+      <h3 class="h6">Otimização e Métricas</h3> 
+      <ul class="list-unstyled d-flex flex-wrap gap-2"> 
+        <li class="badge rounded-pill bg-info text-dark">SEO Técnico</li> 
+        <li class="badge rounded-pill bg-info text-dark">Google Analytics</li> 
+        <li class="badge rounded-pill bg-info text-dark">Google Tag Manager</li> 
+        <li class="badge rounded-pill bg-info text-dark">Performance Web (Lighthouse)</li> 
+        <li class="badge rounded-pill bg-info text-dark">Boas práticas de segurança</li> 
+        <li class="badge rounded-pill bg-info text-dark">Cross-browser Compatibility</li> 
+      </ul> 
+    </article> 
+    <!-- Soft Skills --> 
+    <!--article class="mb-3"> <h3 class="h6">Soft Skills</h3> <ul class="list-unstyled d-flex flex-wrap gap-2"> <li class="badge rounded-pill bg-info text-dark">Comunicação clara</li> <li class="badge rounded-pill bg-info text-dark">Trabalho em equipe</li> <li class="badge rounded-pill bg-info text-dark">Gestão de tempo</li> <li class="badge rounded-pill bg-info text-dark">Resolução de problemas</li> <li class="badge rounded-pill bg-info text-dark">Pensamento analítico</li> <li class="badge rounded-pill bg-info text-dark">Criatividade</li> <li class="badge rounded-pill bg-info text-dark">Aprendizado contínuo</li> <li class="badge rounded-pill bg-info text-dark">Autonomia</li> <li class="badge rounded-pill bg-info text-dark">Empatia com usuários</li> </ul> </article--> </div> 
+  
+  <!-- FORMAÇÃO --> 
+  <div class="tab-pane fade" id="formacao" role="tabpanel" aria-labelledby="formacao-tab" tabindex="0">
+    <ul class="list-group list-group-flush border rounded shadow-sm"> 
+      <li class="list-group-item"> <strong>Pós Graduando em Gestão ágil e Desenvolvimento de Software</strong><br> 
+    Universidade Anhanguera<br> conclusão em julho de 2026 </li> <li class="list-group-item"> <strong>Pós Graduando em Design de Produtos Digitais - UX/UI</strong><br> Universidade Anhanguera<br> conclusão em julho de 2026 </li> <li class="list-group-item"> <strong>Bacharelado em Desenho Industrial</strong><br> Universidade Federal do Espírito Santo (UFES)<br> 2009 – 2017 </li> 
+  </ul> 
+  </div> 
+  <!-- EXPERIÊNCIA --> 
+  <div class="tab-pane fade" id="experiencia" role="tabpanel" aria-labelledby="experiencia-tab" tabindex="0"> 
+    <div class="accordion accordion-flush" id="accordionFlushExperience"> 
+      
+      <div class="accordion-item"> 
+        <h3 class="accordion-header" id="exp-heading1"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp-collapse1" aria-expanded="false" aria-controls="exp-collapse1"> Caramelo Discos — Nov/2022 - atual </button> </h3> <div id="exp-collapse1" class="accordion-collapse collapse" aria-labelledby="exp-heading1" data-bs-parent="#accordionFlushExperience"> 
+          <div class="accordion-body"> 
+            Designer e Social Media 
+          </div> 
+        </div> 
+      </div> 
+      <!-- Prosperi --> <div class="accordion-item"> 
+        <h3 class="accordion-header" id="exp-heading2"> 
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp-collapse2" aria-expanded="false" aria-controls="exp-collapse2"> Prosperi — Nov/2022 - Nov/2023 </button>
+        </h3> 
+        <div id="exp-collapse2" class="accordion-collapse collapse" aria-labelledby="exp-heading2" data-bs-parent="#accordionFlushExperience"> 
+          <div class="accordion-body"> UX/UI Designer e Desenvolvedor Front-end<br> Pesquisa e avaliação de interfaces<br> Criação de wireframes, protótipos funcionais (Figma e Adobe XD)<br> Criação/manutenção de design systems<br> Desenvolvimento front-end (Angular) </div> </div> </div> <!-- Conexos --> <div class="accordion-item"> <h3 class="accordion-header" id="exp-heading3"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp-collapse3" aria-expanded="false" aria-controls="exp-collapse3"> Conexos — Jan/2021 - Mai/2022 </button> </h3> <div id="exp-collapse3" class="accordion-collapse collapse" aria-labelledby="exp-heading3" data-bs-parent="#accordionFlushExperience"> <div class="accordion-body"> UX/UI Designer e Desenvolvedor Front-end<br> Pesquisa e avaliação de interfaces<br> Criação de wireframes, protótipos funcionais (Figma e Adobe XD)<br> Criação/manutenção de design systems<br> Desenvolvimento front-end (Angular) </div> </div> </div> <!-- Atman Systems --> <div class="accordion-item"> <h3 class="accordion-header" id="exp-heading4"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp-collapse4" aria-expanded="false" aria-controls="exp-collapse4"> Atman Systems — Jul/2020 - Dez/2020 </button> </h3> <div id="exp-collapse4" class="accordion-collapse collapse" aria-labelledby="exp-heading4" data-bs-parent="#accordionFlushExperience"> <div class="accordion-body"> UX/UI Designer<br> Pesquisa e avaliação de interfaces<br> Criação de wireframes, protótipos funcionais (Figma e Adobe XD)<br> Criação de design system </div> </div> </div> <!-- CEFOR - IFES --> <div class="accordion-item"> <h3 class="accordion-header" id="exp-heading5"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp-collapse5" aria-expanded="false" aria-controls="exp-collapse5"> CEFOR - IFES — Ago/2018 - Mai/2020 (estágio) </button> </h3> <div id="exp-collapse5" class="accordion-collapse collapse" aria-labelledby="exp-heading5" data-bs-parent="#accordionFlushExperience"> <div class="accordion-body"> UX Designer, Desenvolvedor Web e Pesquisador<br> Pesquisa e avaliação de interfaces<br> Criação de wireframes e protótipos funcionais (Figma e Adobe XD)<br> Criação de design system<br> Desenvolvimento front-end (WordPress) </div> </div> </div> <!-- ORGANON - UFES --> <div class="accordion-item"> <h3 class="accordion-header" id="exp-heading6"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp-collapse6" aria-expanded="false" aria-controls="exp-collapse6"> ORGANON - UFES — Mar/2016 - Dez/2016 (estágio) </button> </h3> <div id="exp-collapse6" class="accordion-collapse collapse" aria-labelledby="exp-heading6" data-bs-parent="#accordionFlushExperience"> <div class="accordion-body"> Designer </div> </div> </div> <!-- GB5 / Resultate --> <div class="accordion-item"> <h3 class="accordion-header" id="exp-heading7"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp-collapse7" aria-expanded="false" aria-controls="exp-collapse7"> GB5 / Resultate — Jan/2014 - Jul/2014 (estágio) </button> </h3> <div id="exp-collapse7" class="accordion-collapse collapse" aria-labelledby="exp-heading7" data-bs-parent="#accordionFlushExperience"> <div class="accordion-body"> Pesquisa e avaliação de interfaces<br> Criação de wireframes e protótipos funcionais </div> </div> </div> <!-- Aldabra --> <div class="accordion-item"> <h3 class="accordion-header" id="exp-heading8"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp-collapse8" aria-expanded="false" aria-controls="exp-collapse8"> Aldabra — Jul/2012 - Jul/2013 (estágio) </button> </h3> <div id="exp-collapse8" class="accordion-collapse collapse" aria-labelledby="exp-heading8" data-bs-parent="#accordionFlushExperience"> <div class="accordion-body"> Desenvolvedor Front-end (CMS próprio) </div> </div> </div> <!-- Prefeitura de Vitória --> <div class="accordion-item"> <h3 class="accordion-header" id="exp-heading9"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp-collapse9" aria-expanded="false" aria-controls="exp-collapse9"> Prefeitura de Vitória — Jan/2011 - Jan/2012 (estágio) </button> </h3> <div id="exp-collapse9" class="accordion-collapse collapse" aria-labelledby="exp-heading9" data-bs-parent="#accordionFlushExperience"> <div class="accordion-body"> Desenvolvedor Front-End (WordPress) </div> </div> </div> <!-- Gota Design --> <div class="accordion-item"> <h3 class="accordion-header" id="exp-heading10"> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp-collapse10" aria-expanded="false" aria-controls="exp-collapse10"> Gota Design — Nov/2009 - Set/2010 (estágio) </button> </h3> <div id="exp-collapse10" class="accordion-collapse collapse" aria-labelledby="exp-heading10" data-bs-parent="#accordionFlushExperience"> 
+        <div class="accordion-body"> Assistente de criação on-line e off-line 
+        </div> 
+        </div> 
+        </div> 
+        </div> 
+        </div> 
+    </div>
+  </div>
+  </div>
+</section>
+
+<section id="contato" class="text-white" aria-labelledby="contato-title" >
+  <div class="container">
+    <header class="section-heading section-heading-centered">
+      <h2 id="contato-title">Vamos conversar</h2>
+      <p class="contact-subtitle">Tem um projeto, produto ou experiência digital que precisa ser melhorado?</p>
+    </header>
+
+    <div id="formSuccess" class="alert alert-success d-none text-center" role="status" aria-live="polite">
+      Mensagem enviada com sucesso! 🚀
+    </div>
+
+    <div id="formError" class="alert alert-danger d-none text-center" role="alert" aria-live="assertive"></div>
+    <form id="formContato" class="col-12 col-md-8 col-lg-6 mx-auto needs-validation" novalidate aria-describedby="formHint">
+      <p id="formHint" class="visually-hidden">Todos os campos são obrigatórios. Preencha os dados para enviar sua mensagem.</p>
+
+      <input type="hidden" name="_subject" value="Novo contato do site">
+
+      <div class="mb-3">
+        <label class="form-label" for="nome">Nome</label>
+        <input type="text" id="nome" class="form-control" name="nome" autocomplete="name" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="email">E-mail</label>
+        <input type="email" id="email" class="form-control" name="email" autocomplete="email" inputmode="email" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="tel">Telefone</label>
+        <input type="tel" id="tel" class="form-control" name="tel" autocomplete="tel" inputmode="tel" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="mensagem">Mensagem</label>
+        <textarea id="mensagem" class="form-control" name="mensagem" rows="5" autocomplete="off" required></textarea>
+      </div>
+
+      <button class="btn btn-site btn-site-primary w-100" type="submit">Enviar</button>
+    </form>
+  </div>
+</section>
+  
+
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-dark text-white py-4">
+  <div class="container text-center">
+    <p class="mb-1 fw-bold">ChicoGui</p>
+    <small>&copy;<span id="ano"></span> — Todos os direitos reservados</small>
+  </div>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.8/dist/inputmask.min.js"></script>
+
+<script src="assets/js/main.js?v=20261108-2"></script>
+
+</body>
+</html>
