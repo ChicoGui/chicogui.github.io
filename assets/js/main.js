@@ -24,6 +24,59 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('resize', updateNavOffset, { passive: true });
   }
 
+  // Mantém o item correspondente à seção visível em destaque.
+  const sectionLinks = Array.from(document.querySelectorAll('.navbar .nav-link[href^="#"]'));
+  const sectionTargets = sectionLinks
+    .map(link => document.getElementById(decodeURIComponent(link.getAttribute('href').slice(1))))
+    .filter(Boolean);
+
+  const setActiveSection = (sectionId) => {
+    sectionLinks.forEach(link => {
+      const isActive = link.getAttribute('href') === '#' + sectionId;
+      link.classList.toggle('is-active', isActive);
+      if (isActive) {
+        link.setAttribute('aria-current', 'location');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  };
+
+  if (sectionTargets.length && 'IntersectionObserver' in window) {
+    const visibleSections = new Map();
+    const sectionObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          visibleSections.set(entry.target.id, entry.intersectionRatio);
+        } else {
+          visibleSections.delete(entry.target.id);
+        }
+      });
+
+      const current = Array.from(visibleSections.entries())
+        .sort((a, b) => b[1] - a[1])[0];
+      if (current) setActiveSection(current[0]);
+    }, {
+      rootMargin: '-18% 0px -62% 0px',
+      threshold: [0, .1, .25, .5, .75, 1]
+    });
+
+    sectionTargets.forEach(section => sectionObserver.observe(section));
+
+    // Estado inicial coerente ao carregar a página com uma âncora na URL.
+    const initialId = window.location.hash.slice(1);
+    if (initialId && sectionTargets.some(section => section.id === initialId)) {
+      setActiveSection(initialId);
+    } else {
+      setActiveSection(sectionTargets[0].id);
+    }
+
+    window.addEventListener('hashchange', () => {
+      const id = window.location.hash.slice(1);
+      if (sectionTargets.some(section => section.id === id)) setActiveSection(id);
+    });
+  }
+
   navLinks.forEach(link => {
     link.addEventListener('click', event => {
       const hash = link.getAttribute('href');
