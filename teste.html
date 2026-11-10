@@ -66,6 +66,24 @@
 .glecia-note{font-size:.78rem;color:#526b77;background:#fff8e8;padding:.8rem 1rem;border-radius:10px;margin:1rem}
 @media(max-width:760px){.glecia-nav-links{display:none}.glecia-hero{grid-template-columns:1fr;min-height:auto}.glecia-hero:after{width:100%;height:45%;top:auto;bottom:0;right:0;border-radius:50% 50% 0 0}.glecia-hero-visual{min-height:220px}.glecia-portrait{width:65%;max-width:260px}.glecia-about{grid-template-columns:100px 1fr;gap:1rem}.glecia-avatar{grid-row:span 2}.glecia-benefits{grid-column:1/-1;border-left:0;border-top:1px solid #c8dfe5;padding:1rem 0 0;grid-template-columns:1fr}.glecia-products{grid-template-columns:repeat(2,1fr)}.glecia-faq{grid-template-columns:1fr;margin:1rem;padding:1.3rem}.glecia-contact,.glecia-footer{flex-direction:column;align-items:flex-start}.glecia-contact{margin:1rem;padding:1.4rem}}
 @media(prefers-reduced-motion:reduce){.glecia-preview *{scroll-behavior:auto!important;transition:none!important}}
+
+/* Estudo de caso Glecia Viana dentro da modal */
+.glecia-case{background:#fff}
+.glecia-case-cover{display:block;width:100%;height:auto;max-height:560px;object-fit:cover;object-position:center}
+.glecia-case-content{max-width:1120px;margin:0 auto;padding:clamp(1.4rem,4vw,3.5rem)}
+.glecia-case-intro{max-width:820px;margin:0 auto 3rem}
+.glecia-case-intro h3,.glecia-case-sections>h3,.glecia-case-preview-label h3{font-size:clamp(1.45rem,3vw,2.15rem);font-weight:800;letter-spacing:-.035em;color:#123b55;margin:.5rem 0 1rem}
+.glecia-case-intro>p:last-child,.glecia-case-preview-label>p:last-child{font-size:1.02rem;line-height:1.75;color:#526b77}
+.glecia-case-section-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.4rem;margin-top:1.7rem}
+.glecia-case-section-grid article{display:flex;gap:1rem;padding:1.2rem 0;border-top:1px solid #dce9ed}
+.glecia-case-section-grid article>span{flex:0 0 2.2rem;color:#1284ad;font-size:.9rem;font-weight:800}
+.glecia-case-section-grid h4{font-size:1.05rem;font-weight:750;color:#123b55;margin:0 0 .45rem}
+.glecia-case-section-grid p{font-size:.9rem;line-height:1.65;color:#526b77;margin:0}
+.glecia-case-preview-label{margin-top:3rem;padding-top:2rem;border-top:1px solid #dce9ed}
+.glecia-case-preview-label h3{margin-bottom:.5rem}
+.glecia-preview{border-top:1px solid #dce9ed}
+@media(max-width:700px){.glecia-case-section-grid{grid-template-columns:1fr;gap:.4rem}.glecia-case-cover{max-height:360px}.glecia-case-content{padding:1.5rem 1.1rem}.glecia-case-intro{margin-bottom:2.2rem}}
+
 </style>
 </head>
 
@@ -208,6 +226,35 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar visualização do projeto"></button>
       </div>
       <div class="modal-body p-0">
+        <div class="glecia-case">
+          <img class="glecia-case-cover" src="assets/img/glecia-viana-thumbnail.jpg" alt="Apresentação da landing page de Glecia Viana em notebook e celular" width="1600" height="900">
+          <div class="glecia-case-content">
+            <section class="glecia-case-intro" aria-labelledby="glecia-case-intro-title">
+              <p class="glecia-eyebrow">CONCEITO DO PROJETO</p>
+              <h3 id="glecia-case-intro-title">Uma experiência digital acolhedora e acessível.</h3>
+              <p>Este projeto buscou apresentar a fonoaudióloga e seus serviços de forma humanizada e leve. Com foco em pacientes com 50 anos ou mais, a proposta prioriza uma linguagem clara, objetiva e fácil de compreender. A identidade visual foi pensada para transmitir tranquilidade, confiança e bem-estar.</p>
+            </section>
+
+            <section class="glecia-case-sections" aria-labelledby="glecia-case-sections-title">
+              <p class="glecia-eyebrow">ARQUITETURA DA PÁGINA</p>
+              <h3 id="glecia-case-sections-title">Como cada seção contribui para a experiência</h3>
+              <div class="glecia-case-section-grid">
+                <article><span>01</span><div><h4>Navegação</h4><p>Organiza os principais conteúdos em um menu direto, permitindo que a pessoa encontre rapidamente informações sobre a profissional, os serviços, os aparelhos auditivos e os canais de contato.</p></div></article>
+                <article><span>02</span><div><h4>Apresentação principal</h4><p>É o primeiro contato com a marca. A mensagem destaca saúde auditiva e qualidade de vida, apresenta a proposta de atendimento e oferece um caminho claro para agendar uma avaliação.</p></div></article>
+                <article><span>03</span><div><h4>Sobre a profissional</h4><p>Apresenta Glecia e sua atuação, aproximando a profissional do público. Os benefícios reforçam atributos importantes para o atendimento: acolhimento, orientação e cuidado individualizado.</p></div></article>
+                <article><span>04</span><div><h4>Soluções em saúde auditiva</h4><p>Apresenta diferentes categorias de aparelhos auditivos de maneira visual e resumida. A organização facilita a compreensão inicial sem substituir a avaliação e a orientação profissional.</p></div></article>
+                <article><span>05</span><div><h4>Dúvidas frequentes</h4><p>Reúne perguntas comuns sobre necessidade, modelos e adaptação dos aparelhos. A seção antecipa dúvidas e ajuda a pessoa a avançar com mais segurança na busca por atendimento.</p></div></article>
+                <article><span>06</span><div><h4>Contato e chamada para ação</h4><p>Fecha o percurso com um convite objetivo para conversar com a profissional. O destaque do contato reduz etapas entre o interesse e o próximo passo.</p></div></article>
+                <article><span>07</span><div><h4>Rodapé</h4><p>Retoma a identificação profissional e a mensagem da marca, encerrando a página de forma consistente e oferecendo espaço para informações institucionais e redes sociais.</p></div></article>
+              </div>
+            </section>
+            <div class="glecia-case-preview-label">
+              <p class="glecia-eyebrow">PRÉVIA DO PROJETO</p>
+              <h3>Explore a estrutura da landing page</h3>
+              <p>Abaixo, uma demonstração da organização visual e dos principais conteúdos da página.</p>
+            </div>
+          </div>
+        </div>
         <div class="glecia-preview">
           <nav class="glecia-nav" aria-label="Navegação da landing page de demonstração">
             <a class="glecia-brand" href="#glecia-inicio"><i class="bi bi-ear" aria-hidden="true"></i><span>Glecia Viana<small>FONOAUDIÓLOGA</small></span></a>
