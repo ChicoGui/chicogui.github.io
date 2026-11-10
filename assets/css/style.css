@@ -1154,3 +1154,13 @@ section.hero-image{
   .navbar .navbar-nav .nav-link,
   .navbar .navbar-nav .nav-link::after{transition:none}
 }
+
+
+/* Desktop: aproxima o texto de identificação do topo da hero para garantir
+   que ele apareça na primeira dobra, sem alterar o espaçamento mobile. */
+@media(min-width:992px){
+  #hero{
+    min-height:clamp(380px,calc(100svh - 13rem),500px);
+    padding-block:clamp(2rem,4vh,3rem) 2.5rem;
+  }
+}
