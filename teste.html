@@ -85,6 +85,26 @@
 @media(max-width:700px){.glecia-case-section-grid{grid-template-columns:1fr;gap:.4rem}.glecia-case-cover{max-height:360px}.glecia-case-content{padding:1.5rem 1.1rem}.glecia-case-intro{margin-bottom:2.2rem}}
 
 </style>
+
+<style>
+/* Metodologia — fluxo visual conectado, isolado na página de testes */
+#metodologia .method-process{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.1rem 1.25rem;margin:0;padding:0;list-style:none;counter-reset:method}
+#metodologia .method-process::before{content:"";position:absolute;z-index:0;top:2.05rem;left:8.333%;right:8.333%;height:2px;background:linear-gradient(90deg,#238fc0 0%,#67c8f2 55%,#d9e2e7 100%)}
+#metodologia .method-process-item{position:relative;min-width:0;z-index:1}
+#metodologia .method-step-card{height:100%;min-height:255px;padding:1.35rem;border:1px solid #e1e6e9;border-radius:.85rem;background:#fff;box-shadow:0 8px 26px rgba(23,25,29,.045);transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+#metodologia .method-step-top{display:flex;align-items:center;gap:.8rem;margin-bottom:1.15rem}
+#metodologia .method-step-icon{display:grid;place-items:center;width:2.65rem;height:2.65rem;flex:0 0 2.65rem;border:1px solid #b9e3f3;border-radius:50%;background:#edf8fc;color:#176b91;font-size:1.15rem}
+#metodologia .method-step-number{color:#238fc0;font-size:.82rem;font-weight:800;letter-spacing:.08em}
+#metodologia .method-step-card h3{margin:0 0 .65rem;color:#17191d;font-size:1.18rem;font-weight:800;letter-spacing:-.025em}
+#metodologia .method-step-card p{margin:0;color:#59636d;font-size:.91rem;line-height:1.7}
+#metodologia .method-deliverable{display:block;margin-top:1rem;padding-top:.8rem;border-top:1px solid #edf0f2;color:#176b91;font-size:.75rem;font-weight:750;letter-spacing:.015em}
+#metodologia .method-process-note{display:flex;align-items:flex-start;gap:.65rem;max-width:760px;margin:1.5rem auto 0;color:#68737c;font-size:.85rem;line-height:1.6;text-align:center}
+#metodologia .method-process-note i{flex:0 0 auto;color:#238fc0;font-size:1rem}
+@media(hover:hover) and (pointer:fine){#metodologia .method-step-card:hover{transform:translateY(-4px);border-color:#a8d9ed;box-shadow:0 14px 32px rgba(23,25,29,.09)}}
+@media(max-width:767.98px){#metodologia .method-process{grid-template-columns:1fr;gap:1rem;padding-left:1.15rem}#metodologia .method-process::before{top:1rem;bottom:1rem;left:.32rem;right:auto;width:2px;height:auto;background:linear-gradient(180deg,#238fc0,#67c8f2,#d9e2e7)}#metodologia .method-process-item::before{content:"";position:absolute;top:1.9rem;left:-1.12rem;width:.55rem;height:.55rem;border:2px solid #238fc0;border-radius:50%;background:#fff}#metodologia .method-step-card{min-height:0;padding:1.15rem}#metodologia .method-step-top{margin-bottom:.8rem}#metodologia .method-process-note{text-align:left}}
+@media(prefers-reduced-motion:reduce){#metodologia .method-step-card{transition:none}#metodologia .method-step-card:hover{transform:none}}
+</style>
+
 </head>
 
 <body>
@@ -452,32 +472,75 @@ document.addEventListener('DOMContentLoaded',function(){
       <h2 id="metodologia-title">Da ideia à evolução.</h2>
       <p>Um processo integrado que transforma necessidades reais em experiências digitais funcionais, acessíveis e relevantes.</p>
     </header>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3 methodology-grid">
-      <article class="col"><div class="card method-step h-100">
-        <div class="method-step-top"><span class="method-step-icon"><i class="bi bi-search" aria-hidden="true"></i></span><span class="method-step-number">01.</span><h3>Pesquisa</h3></div>
-        <p>Investigo pessoas, negócio e contexto por meio de entrevistas, análise e levantamento de requisitos. Decisões melhores começam com perguntas certas.</p>
-      </div></article>
-      <article class="col"><div class="card method-step h-100">
-        <div class="method-step-top"><span class="method-step-icon"><i class="bi bi-compass" aria-hidden="true"></i></span><span class="method-step-number">02.</span><h3>Estratégia</h3></div>
-        <p>Organizo objetivos, prioridades e arquitetura da informação para definir uma direção clara e alinhar as necessidades dos usuários aos objetivos do projeto.</p>
-      </div></article>
-      <article class="col"><div class="card method-step h-100">
-        <div class="method-step-top"><span class="method-step-icon"><i class="bi bi-vector-pen" aria-hidden="true"></i></span><span class="method-step-number">03.</span><h3>Design</h3></div>
-        <p>Desenho jornadas, fluxos, wireframes e interfaces. Prototipo experiências intuitivas, consistentes e acessíveis antes de avançar para a implementação.</p>
-      </div></article>
-      <article class="col"><div class="card method-step h-100">
-        <div class="method-step-top"><span class="method-step-icon"><i class="bi bi-code-slash" aria-hidden="true"></i></span><span class="method-step-number">04.</span><h3>Desenvolvimento</h3></div>
-        <p>Transformo o projeto em produto digital com código responsivo, integrações e atenção à acessibilidade, performance, segurança e manutenção.</p>
-      </div></article>
-      <article class="col"><div class="card method-step h-100">
-        <div class="method-step-top"><span class="method-step-icon"><i class="bi bi-check2-circle" aria-hidden="true"></i></span><span class="method-step-number">05.</span><h3>Validação</h3></div>
-        <p>Testo fluxos e funcionalidades, identifico pontos de fricção e ajusto a solução com base em feedback, critérios de qualidade e dados de uso.</p>
-      </div></article>
-      <article class="col"><div class="card method-step h-100">
-        <div class="method-step-top"><span class="method-step-icon"><i class="bi bi-arrow-repeat" aria-hidden="true"></i></span><span class="method-step-number">06.</span><h3>Evolução</h3></div>
-        <p>Publico e acompanho o projeto. Métricas, feedbacks e necessidades que surgem no uso orientam melhorias contínuas e novas oportunidades.</p>
-      </div></article>
-    </div>
+    <ol class="method-process" aria-label="Seis etapas conectadas da metodologia de trabalho">
+      <li class="method-process-item">
+        <article class="method-step-card">
+          <div class="method-step-top">
+            <span class="method-step-icon" aria-hidden="true"><i class="bi bi-search"></i></span>
+            <span class="method-step-number">01.</span>
+          </div>
+          <h3>Pesquisa</h3>
+          <p>Investigo pessoas, negócio e contexto por meio de entrevistas, análise e levantamento de requisitos. Decisões melhores começam com perguntas certas.</p>
+          <span class="method-deliverable">Entregável · Mapa de necessidades</span>
+        </article>
+      </li>
+      <li class="method-process-item">
+        <article class="method-step-card">
+          <div class="method-step-top">
+            <span class="method-step-icon" aria-hidden="true"><i class="bi bi-compass"></i></span>
+            <span class="method-step-number">02.</span>
+          </div>
+          <h3>Estratégia</h3>
+          <p>Organizo objetivos, prioridades e arquitetura da informação para definir uma direção clara e alinhar as necessidades dos usuários aos objetivos do projeto.</p>
+          <span class="method-deliverable">Entregável · Direcionamento e escopo</span>
+        </article>
+      </li>
+      <li class="method-process-item">
+        <article class="method-step-card">
+          <div class="method-step-top">
+            <span class="method-step-icon" aria-hidden="true"><i class="bi bi-vector-pen"></i></span>
+            <span class="method-step-number">03.</span>
+          </div>
+          <h3>Design</h3>
+          <p>Desenho jornadas, fluxos, wireframes e interfaces. Prototipo experiências intuitivas, consistentes e acessíveis antes de avançar para a implementação.</p>
+          <span class="method-deliverable">Entregável · Fluxos e protótipo</span>
+        </article>
+      </li>
+      <li class="method-process-item">
+        <article class="method-step-card">
+          <div class="method-step-top">
+            <span class="method-step-icon" aria-hidden="true"><i class="bi bi-code-slash"></i></span>
+            <span class="method-step-number">04.</span>
+          </div>
+          <h3>Desenvolvimento</h3>
+          <p>Transformo o projeto em produto digital com código responsivo, integrações e atenção à acessibilidade, performance, segurança e manutenção.</p>
+          <span class="method-deliverable">Entregável · Produto funcional</span>
+        </article>
+      </li>
+      <li class="method-process-item">
+        <article class="method-step-card">
+          <div class="method-step-top">
+            <span class="method-step-icon" aria-hidden="true"><i class="bi bi-check2-circle"></i></span>
+            <span class="method-step-number">05.</span>
+          </div>
+          <h3>Validação</h3>
+          <p>Testo fluxos e funcionalidades, identifico pontos de fricção e ajusto a solução com base em feedback, critérios de qualidade e dados de uso.</p>
+          <span class="method-deliverable">Entregável · Testes e ajustes</span>
+        </article>
+      </li>
+      <li class="method-process-item">
+        <article class="method-step-card">
+          <div class="method-step-top">
+            <span class="method-step-icon" aria-hidden="true"><i class="bi bi-arrow-repeat"></i></span>
+            <span class="method-step-number">06.</span>
+          </div>
+          <h3>Evolução</h3>
+          <p>Publico e acompanho o projeto. Métricas, feedbacks e necessidades que surgem no uso orientam melhorias contínuas e novas oportunidades.</p>
+          <span class="method-deliverable">Entregável · Melhorias contínuas</span>
+        </article>
+      </li>
+    </ol>
+    <p class="method-process-note"><i class="bi bi-arrow-repeat" aria-hidden="true"></i> O processo é colaborativo e iterativo: aprendizados de cada etapa podem orientar ajustes nas anteriores.</p>
   </div>
 </section>
 
