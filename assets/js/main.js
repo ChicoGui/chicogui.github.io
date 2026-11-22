@@ -358,42 +358,30 @@ modais.forEach((modalEl, index) => {
     if (index < servicos.length - 1) navigateToModal(index + 1);
   });
 
-});
+  // Qualquer CTA da modal fecha a janela e leva ao formulário de contato.
+  modalEl.addEventListener('click', (event) => {
+    const contactCta = event.target.closest('.modal-contact-cta');
+    if (!contactCta) return;
 
+    event.preventDefault();
 
-});
+    modalEl.addEventListener('hidden.bs.modal', () => {
+      const contactSection = document.getElementById('contato');
+      const firstField = document.getElementById('nome');
 
-/* CTA de contato compartilhada por todas as modais (serviços e projetos).
-   A delegação no documento garante o mesmo comportamento inclusive nas modais
-   de projetos que já existem no HTML antes das modais de serviços serem criadas. */
-document.addEventListener('click', (event) => {
-  const contactCta = event.target.closest('.modal-contact-cta');
-  if (!contactCta) return;
+      if (!contactSection) {
+        window.location.hash = 'contato';
+        return;
+      }
 
-  const modalEl = contactCta.closest('.modal');
-  if (!modalEl) return;
+      // Atualiza a URL sem provocar uma rolagem abrupta.
+      window.history.replaceState(null, '', '#contato');
+      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      firstField?.focus({ preventScroll: true });
+    }, { once: true });
 
-  event.preventDefault();
-
-  modalEl.addEventListener('hidden.bs.modal', () => {
-    const contactSection = document.getElementById('contato');
-    const firstField = document.getElementById('nome');
-
-    if (!contactSection) {
-      window.location.hash = 'contato';
-      return;
-    }
-
-    window.history.replaceState(null, '', '#contato');
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    contactSection.scrollIntoView({
-      behavior: reduceMotion ? 'auto' : 'smooth',
-      block: 'start'
-    });
-    firstField?.focus({ preventScroll: true });
-  }, { once: true });
-
-  bootstrap.Modal.getOrCreateInstance(modalEl).hide();
+    bootstrap.Modal.getOrCreateInstance(modalEl).hide();
+  });
 });
 
 
@@ -450,3 +438,38 @@ Inputmask({
   mask: ["(99) 9999-9999", "(99) 99999-9999"],
   keepStatic: true
 }).mask("#tel");
+
+
+/* ===== CTA das modais de projetos: fechar modal e abrir contato ===== */
+document.querySelectorAll('.project-contact').forEach(function(link){
+  link.addEventListener('click',function(event){
+    event.preventDefault();
+    event.stopPropagation();
+
+    var modal=link.closest('.modal');
+    var contactSection=document.getElementById('contato');
+    var firstField=document.querySelector('#formContato input:not([type="hidden"]), #formContato textarea, #formContato select');
+    var reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    var goToContact=function(){
+      if(!contactSection) return;
+
+      window.history.replaceState(null,'','#contato');
+      contactSection.scrollIntoView({
+        behavior:reduceMotion.matches?'auto':'smooth',
+        block:'start'
+      });
+
+      if(firstField){
+        firstField.focus({preventScroll:true});
+      }
+    };
+
+    if(modal){
+      modal.addEventListener('hidden.bs.modal',goToContact,{once:true});
+      bootstrap.Modal.getOrCreateInstance(modal).hide();
+    }else{
+      goToContact();
+    }
+  });
+});
