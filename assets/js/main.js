@@ -438,3 +438,40 @@ Inputmask({
   mask: ["(99) 9999-9999", "(99) 99999-9999"],
   keepStatic: true
 }).mask("#tel");
+
+
+/* ===== Interação das modais da seção de projetos ===== */
+document.addEventListener('DOMContentLoaded',function(){
+  var reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+  document.querySelectorAll('.project-contact').forEach(function(link){
+    link.addEventListener('click',function(event){
+      event.preventDefault();
+      event.stopPropagation();
+
+      var modal=link.closest('.modal');
+      var contactSection=document.getElementById('contato');
+      var firstField=document.querySelector('#formContato input:not([type="hidden"]), #formContato textarea, #formContato select');
+
+      var goToContact=function(){
+        if(!contactSection) return;
+        window.history.replaceState(null,'','#contato');
+        contactSection.scrollIntoView({
+          behavior:reduceMotion.matches?'auto':'smooth',
+          block:'start'
+        });
+        if(firstField){
+          window.setTimeout(function(){
+            firstField.focus({preventScroll:true});
+          },reduceMotion.matches?0:350);
+        }
+      };
+
+      if(modal){
+        modal.addEventListener('hidden.bs.modal',goToContact,{once:true});
+        bootstrap.Modal.getOrCreateInstance(modal).hide();
+      }else{
+        goToContact();
+      }
+    });
+  });
+});
