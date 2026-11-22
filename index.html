@@ -20,7 +20,7 @@
 
 
   <link rel="preload" as="image" href="assets/img/chicoOffice-q88.webp?v=20261108-2" fetchpriority="high">
-  <link href="assets/css/style.css?v=20261108-2" rel="stylesheet">
+  <link href="assets/css/style.css?v=20261121-1" rel="stylesheet">
 
 </head>
 
@@ -41,7 +41,7 @@
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item"><a class="nav-link" href="#hero">Início</a></li>
         <li class="nav-item"><a class="nav-link" href="#areas">Atuação</a></li>
-        <li class="nav-item"><a class="nav-link" href="#hero-services-strip">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
         <li class="nav-item"><a class="nav-link" href="#metodologia">Metodologia</a></li>
         <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
         <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
@@ -61,7 +61,7 @@
       <p class="hero-description">Transformo ideias em soluções digitais funcionais, acessíveis e intuitivas — unindo estratégia, UX/UI e desenvolvimento web.</p>
       <div class="hero-actions">
         <a href="#contato" class="btn btn-site btn-site-primary btn-site-lg">Vamos conversar?</a>
-        <a href="teste.html#projetos" class="btn btn-site btn-site-ghost btn-site-lg">Ver projetos</a>
+        <a href="#projetos" class="btn btn-site btn-site-ghost btn-site-lg">Ver projetos</a>
       </div>
     </div>
   </div>
@@ -124,6 +124,189 @@
   </div>
 </section>
 <div id="modaisServicos"></div>
+
+<section id="projetos" class="projects-section bg-light reveal" aria-labelledby="projetos-title">
+  <div class="container">
+    <header class="projects-heading">
+      <p class="projects-eyebrow">PORTFÓLIO / ÚLTIMOS TRABALHOS</p>
+      <h2 id="projetos-title">Projetos que conectam pessoas com <span>design</span> e <span>tecnologia</span>.</h2>
+      <p>Uma seleção de experiências digitais, interfaces e soluções construídas ao longo da minha trajetória profissional.</p>
+    </header>
+    <div class="row g-4 projects-grid justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+        <article class="project-card h-100">
+          <div class="project-thumb-wrap">
+            <img class="project-thumb" src="assets/img/glecia-viana-thumbnail.jpg" alt="Thumbnail demonstrativa da landing page para Glecia Viana, fonoaudióloga" loading="lazy" decoding="async" width="720" height="450">
+            <span class="project-number">01</span>
+          </div>
+          <div class="project-card-body">
+            <p class="project-type">Landing page · Saúde auditiva</p>
+            <h3>Glecia Viana — Fonoaudióloga</h3>
+            <p class="project-description">Landing page para apresentar a profissional e seus serviços, divulgar aparelhos auditivos e transformar visitas em contatos e oportunidades de venda.</p>
+            <div class="project-tags"><span>Site institucional</span><span>Landing page</span><span>UX/UI</span><span>Desenvolvimento</span></div>
+            <button class="btn btn-site btn-site-secondary project-open" type="button" data-bs-toggle="modal" data-bs-target="#case-projeto-web" aria-haspopup="dialog">Conhecer projeto <i class="bi bi-arrow-up-right" aria-hidden="true"></i></button>
+          </div>
+        </article>
+      </div>
+    </div>
+    <p class="projects-footnote">Projeto em destaque · Apresentação visual em desenvolvimento.</p>
+  </div>
+</section>
+
+  
+<div class="modal fade project-modal" id="case-projeto-web" tabindex="-1" aria-labelledby="case-projeto-web-title" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen-xl-down modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div><p class="project-type mb-1">LANDING PAGE · SAÚDE AUDITIVA</p><h2 class="modal-title" id="case-projeto-web-title">Glecia Viana — Fonoaudióloga</h2></div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar visualização do projeto"></button>
+      </div>
+      <div class="modal-body p-0">
+        <div class="glecia-case">
+          <img class="glecia-case-cover" src="assets/img/glecia-viana-mobile-experience.jpg" alt="Mulher de meia-idade segurando um smartphone e visualizando a versão mobile do site de Glecia Viana" width="1600" height="900" loading="eager" decoding="async">
+          <div class="glecia-case-content">
+            <section class="glecia-case-intro" aria-labelledby="glecia-case-intro-title">
+              <div class="glecia-case-concept-visual">
+                <img src="assets/img/glecia-viana-thumbnail.jpg" alt="Apresentação do site de Glecia Viana em notebook e smartphone, nas versões desktop e mobile" width="720" height="450" loading="lazy" decoding="async">
+              </div>
+              <div class="glecia-case-concept-copy">
+                <p class="glecia-eyebrow">CONCEITO DO PROJETO</p>
+                <h3 id="glecia-case-intro-title">Uma experiência digital acolhedora e acessível.</h3>
+                <p>Este projeto buscou apresentar a fonoaudióloga e seus serviços de forma humanizada e leve. Com foco em pacientes com 50 anos ou mais, a proposta prioriza uma linguagem clara, objetiva e fácil de compreender. A identidade visual foi pensada para transmitir tranquilidade, confiança e bem-estar.</p>
+              </div>
+            </section>
+
+            <section class="glecia-case-sections" aria-labelledby="glecia-case-sections-title">
+              <p class="glecia-eyebrow">ARQUITETURA DA PÁGINA</p>
+              <h3 id="glecia-case-sections-title">Como cada seção contribui para a experiência</h3>
+              <div class="glecia-case-section-grid">
+                <article><span>01</span><div><h4>Navegação</h4><p>Organiza os principais conteúdos em um menu direto, permitindo que a pessoa encontre rapidamente informações sobre a profissional, os serviços, os aparelhos auditivos e os canais de contato.</p></div></article>
+                <article><span>02</span><div><h4>Apresentação principal</h4><p>É o primeiro contato com a marca. A mensagem destaca saúde auditiva e qualidade de vida, apresenta a proposta de atendimento e oferece um caminho claro para agendar uma avaliação.</p></div></article>
+                <article><span>03</span><div><h4>Sobre a profissional</h4><p>Apresenta Glecia e sua atuação, aproximando a profissional do público. Os benefícios reforçam atributos importantes para o atendimento: acolhimento, orientação e cuidado individualizado.</p></div></article>
+                <article><span>04</span><div><h4>Soluções em saúde auditiva</h4><p>Apresenta diferentes categorias de aparelhos auditivos de maneira visual e resumida. A organização facilita a compreensão inicial sem substituir a avaliação e a orientação profissional.</p></div></article>
+                <article><span>05</span><div><h4>Dúvidas frequentes</h4><p>Reúne perguntas comuns sobre necessidade, modelos e adaptação dos aparelhos. A seção antecipa dúvidas e ajuda a pessoa a avançar com mais segurança na busca por atendimento.</p></div></article>
+                <article><span>06</span><div><h4>Contato e chamada para ação</h4><p>Fecha o percurso com um convite objetivo para conversar com a profissional. O destaque do contato reduz etapas entre o interesse e o próximo passo.</p></div></article>
+                <article><span>07</span><div><h4>Rodapé</h4><p>Retoma a identificação profissional e a mensagem da marca, encerrando a página de forma consistente e oferecendo espaço para informações institucionais e redes sociais.</p></div></article>
+              </div>
+            </section>
+            <div class="glecia-case-preview-label">
+              <p class="glecia-eyebrow">PRÉVIA DO PROJETO</p>
+              <h3>Explore a estrutura da landing page</h3>
+              <p>Abaixo, uma demonstração da organização visual e dos principais conteúdos da página.</p>
+            </div>
+          </div>
+        </div>
+        <div class="glecia-preview">
+          <nav class="glecia-nav" aria-label="Navegação da landing page de demonstração">
+            <a class="glecia-brand" href="#glecia-inicio"><i class="bi bi-ear" aria-hidden="true"></i><span>Glecia Viana<small>FONOAUDIÓLOGA</small></span></a>
+            <div class="glecia-nav-links"><a href="#glecia-sobre">Sobre mim</a><a href="#glecia-servicos">Serviços</a><a href="#glecia-aparelhos">Aparelhos auditivos</a><a href="#glecia-duvidas">Dúvidas</a><a href="#glecia-contato">Contato</a></div>
+            <a class="glecia-btn" href="#glecia-contato"><i class="bi bi-whatsapp" aria-hidden="true"></i> Fale comigo</a>
+          </nav>
+          <section class="glecia-hero" id="glecia-inicio">
+            <div class="glecia-hero-copy">
+              <p class="glecia-eyebrow">Saúde auditiva · Qualidade de vida</p>
+              <h1>Volte a aproveitar <span>cada som da vida.</span></h1>
+              <p>Conheça os serviços de saúde auditiva e descubra soluções que podem ajudar você a ouvir melhor.</p>
+              <a class="glecia-btn" href="#glecia-contato"><i class="bi bi-whatsapp" aria-hidden="true"></i> Agende uma avaliação</a>
+            </div>
+            <div class="glecia-hero-visual" aria-hidden="true"><div class="glecia-portrait"><i class="bi bi-person-hearts"></i></div></div>
+          </section>
+          <section class="glecia-about" id="glecia-sobre">
+            <div class="glecia-avatar" aria-hidden="true"><i class="bi bi-person-badge"></i></div>
+            <div><p class="glecia-eyebrow">Conheça a profissional</p><h2>Glecia Viana</h2><p>Fonoaudióloga com atendimento acolhedor e personalizado em saúde auditiva.</p><a href="#glecia-contato">Conheça meu trabalho <i class="bi bi-arrow-right"></i></a></div>
+            <div class="glecia-benefits"><div><i class="bi bi-heart" aria-hidden="true"></i><span>Atendimento humanizado e personalizado</span></div><div><i class="bi bi-soundwave" aria-hidden="true"></i><span>Orientação em saúde auditiva</span></div><div><i class="bi bi-shield-check" aria-hidden="true"></i><span>Cuidado com sua qualidade de vida</span></div></div>
+          </section>
+          <section class="glecia-section" id="glecia-aparelhos">
+            <p class="glecia-eyebrow">Conheça as soluções</p><h2>Tecnologia a favor da sua audição</h2><p class="glecia-section-lead">Conheça opções de aparelhos auditivos e encontre, com orientação profissional, a solução adequada às suas necessidades.</p>
+            <div class="glecia-products">
+              <article class="glecia-product"><div class="glecia-device"><i class="bi bi-ear"></i></div><h3>Retroauricular</h3><p>Potência e discrição</p></article>
+              <article class="glecia-product"><div class="glecia-device"><i class="bi bi-earbuds"></i></div><h3>Intra-auricular</h3><p>Conforto e praticidade</p></article>
+              <article class="glecia-product"><div class="glecia-device"><i class="bi bi-headphones"></i></div><h3>Receptor no canal</h3><p>Equilíbrio e naturalidade</p></article>
+              <article class="glecia-product"><div class="glecia-device"><i class="bi bi-circle"></i></div><h3>Modelos discretos</h3><p>Opções compactas</p></article>
+            </div>
+          </section>
+          <section class="glecia-faq" id="glecia-duvidas">
+            <div><p class="glecia-eyebrow">Estamos aqui para ajudar</p><h2>Dúvidas frequentes</h2><p>Informação clara para você dar o próximo passo com tranquilidade.</p><a class="glecia-btn" href="#glecia-contato">Fale com a profissional</a></div>
+            <div><div class="glecia-question">Como saber se preciso de um aparelho auditivo? <i class="bi bi-plus float-end"></i></div><div class="glecia-question">Quais são os tipos de aparelhos disponíveis? <i class="bi bi-plus float-end"></i></div><div class="glecia-question">Como funciona a adaptação? <i class="bi bi-plus float-end"></i></div><div class="glecia-question">Como agendar uma avaliação? <i class="bi bi-plus float-end"></i></div></div>
+          </section>
+          <section class="glecia-contact" id="glecia-contato"><div><p class="glecia-eyebrow">Vamos conversar?</p><h2>Ouvir melhor pode começar com uma conversa.</h2><p>Entre em contato para conhecer os serviços e esclarecer suas dúvidas.</p></div><a class="glecia-btn" href="#glecia-contato"><i class="bi bi-whatsapp"></i> Fale com a Glecia</a></section>
+          <footer class="glecia-footer"><div class="glecia-brand"><i class="bi bi-ear"></i><span>Glecia Viana<small>FONOAUDIÓLOGA</small></span></div><p class="mb-0">Cuidando da sua audição, conectando você ao que importa.</p><div><i class="bi bi-instagram me-2"></i><i class="bi bi-facebook"></i></div></footer>
+        </div>
+        <p class="glecia-note"><strong>Protótipo visual:</strong> textos, ícones e elementos fotográficos são ilustrativos. Dados profissionais, imagens reais, depoimentos, avaliações e links de contato precisam ser validados com a cliente antes da publicação.</p>
+      </div>
+      <div class="modal-footer"><a href="#contato" class="btn btn-site btn-site-primary project-contact" data-bs-dismiss="modal">Vamos conversar sobre um projeto?</a><button type="button" class="btn btn-site btn-site-secondary" data-bs-dismiss="modal">Fechar</button></div>
+    </div>
+  </div>
+</div>
+<div class="modal fade project-modal" id="case-projeto-commerce" tabindex="-1" aria-labelledby="case-projeto-commerce-title" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div><p class="project-type mb-1">E-commerce · ESTUDO DE CASO</p><h2 class="modal-title" id="case-projeto-commerce-title">Produtos Digitais</h2></div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar detalhes do projeto"></button>
+        </div>
+        <div class="modal-body">
+          <img class="project-modal-image" src="assets/img/ecommerce.png" alt="Thumbnail demonstrativa de e-commerce" width="1200" height="750">
+          <p class="project-modal-intro">Projeto demonstrativo de comércio eletrônico, utilizado aqui para apresentar como imagens, contexto e informações técnicas serão organizados.</p>
+          <div class="row g-4 project-case-grid">
+            <div class="col-12 col-md-6"><h3>O desafio</h3><p>Reduzir fricções na descoberta de produtos e tornar o percurso de compra mais compreensível.</p></div>
+            <div class="col-12 col-md-6"><h3>Minha atuação</h3><p>Atuação e responsabilidades específicas serão descritas conforme o projeto real escolhido.</p></div>
+            <div class="col-12 col-md-6"><h3>A solução</h3><p>Organização de catálogo, hierarquia de informações e interface adaptada a diferentes telas.</p></div>
+            <div class="col-12 col-md-6"><h3>Tecnologias e práticas</h3><p>UX/UI · Front-end · Integrações</p></div>
+            <div class="col-12"><div class="project-result"><h3>Resultados e aprendizados</h3><p>Resultados verificáveis serão apresentados após a inclusão do case real.</p></div></div>
+          </div>
+          <p class="project-demo-note"><i class="bi bi-info-circle" aria-hidden="true"></i> Conteúdo demonstrativo: textos, papéis e resultados deverão ser revisados e substituídos pelos dados reais antes da publicação definitiva.</p>
+        </div>
+        <div class="modal-footer"><a href="#contato" class="btn btn-site btn-site-primary project-contact" data-bs-dismiss="modal">Vamos conversar sobre um projeto?</a><button type="button" class="btn btn-site btn-site-secondary" data-bs-dismiss="modal">Fechar</button></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade project-modal" id="case-projeto-educacao" tabindex="-1" aria-labelledby="case-projeto-educacao-title" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div><p class="project-type mb-1">Plataforma educacional · ESTUDO DE CASO</p><h2 class="modal-title" id="case-projeto-educacao-title">Educação Digital</h2></div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar detalhes do projeto"></button>
+        </div>
+        <div class="modal-body">
+          <img class="project-modal-image" src="assets/img/ava.png" alt="Thumbnail demonstrativa de plataforma educacional" width="1200" height="750">
+          <p class="project-modal-intro">Projeto demonstrativo de plataforma educacional. A modal apresenta a estrutura prevista para contextualizar o produto e sua experiência.</p>
+          <div class="row g-4 project-case-grid">
+            <div class="col-12 col-md-6"><h3>O desafio</h3><p>Facilitar o acesso a conteúdos, atividades e informações para diferentes perfis de usuários.</p></div>
+            <div class="col-12 col-md-6"><h3>Minha atuação</h3><p>Pesquisa, arquitetura da informação, UX/UI e implementação serão detalhadas de acordo com sua participação real.</p></div>
+            <div class="col-12 col-md-6"><h3>A solução</h3><p>Fluxos claros, componentes consistentes e atenção à acessibilidade e responsividade.</p></div>
+            <div class="col-12 col-md-6"><h3>Tecnologias e práticas</h3><p>UX · UI · Acessibilidade · CMS</p></div>
+            <div class="col-12"><div class="project-result"><h3>Resultados e aprendizados</h3><p>Métricas, aprendizados e resultados serão incluídos quando houver dados confirmados.</p></div></div>
+          </div>
+          <p class="project-demo-note"><i class="bi bi-info-circle" aria-hidden="true"></i> Conteúdo demonstrativo: textos, papéis e resultados deverão ser revisados e substituídos pelos dados reais antes da publicação definitiva.</p>
+        </div>
+        <div class="modal-footer"><a href="#contato" class="btn btn-site btn-site-primary project-contact" data-bs-dismiss="modal">Vamos conversar sobre um projeto?</a><button type="button" class="btn btn-site btn-site-secondary" data-bs-dismiss="modal">Fechar</button></div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade project-modal" id="case-projeto-sistema" tabindex="-1" aria-labelledby="case-projeto-sistema-title" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div><p class="project-type mb-1">Dashboard / sistema web · ESTUDO DE CASO</p><h2 class="modal-title" id="case-projeto-sistema-title">Sistemas e Plataformas</h2></div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar detalhes do projeto"></button>
+        </div>
+        <div class="modal-body">
+          <img class="project-modal-image" src="assets/img/dashboard.png" alt="Thumbnail demonstrativa de dashboard" width="1200" height="750">
+          <p class="project-modal-intro">Projeto demonstrativo de sistema web, pensado para validar a apresentação de dashboards, fluxos e decisões de interface.</p>
+          <div class="row g-4 project-case-grid">
+            <div class="col-12 col-md-6"><h3>O desafio</h3><p>Transformar processos e dados em tarefas e informações fáceis de compreender e operar.</p></div>
+            <div class="col-12 col-md-6"><h3>Minha atuação</h3><p>A contribuição individual e o trabalho em equipe serão discriminados no case definitivo.</p></div>
+            <div class="col-12 col-md-6"><h3>A solução</h3><p>Painéis organizados, hierarquia visual, componentes reutilizáveis e fluxos objetivos.</p></div>
+            <div class="col-12 col-md-6"><h3>Tecnologias e práticas</h3><p>UX/UI · Design System · JavaScript</p></div>
+            <div class="col-12"><div class="project-result"><h3>Resultados e aprendizados</h3><p>Não há indicadores atribuídos nesta versão demonstrativa.</p></div></div>
+          </div>
+          <p class="project-demo-note"><i class="bi bi-info-circle" aria-hidden="true"></i> Conteúdo demonstrativo: textos, papéis e resultados deverão ser revisados e substituídos pelos dados reais antes da publicação definitiva.</p>
+        </div>
+        <div class="modal-footer"><a href="#contato" class="btn btn-site btn-site-primary project-contact" data-bs-dismiss="modal">Vamos conversar sobre um projeto?</a><button type="button" class="btn btn-site btn-site-secondary" data-bs-dismiss="modal">Fechar</button></div>
+      </div>
+    </div>
+  </div>
 
 <section id="hero2" role="img" aria-label="Ambiente de trabalho e criação digital" class="hero-image d-flex align-items-center justify-content-center text-center text-white" style="background-image: url('assets/img/chicoDesk.png');">
 </section>
@@ -406,7 +589,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.8/dist/inputmask.min.js"></script>
 
-<script src="assets/js/main.js?v=20261108-2"></script>
+<script src="assets/js/main.js?v=20261121-1"></script>
 
 </body>
 </html>
